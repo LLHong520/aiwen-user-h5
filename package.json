@@ -2,10 +2,10 @@
   "name": "aiwen_user_h5",
   "version": "1.0.0",
   "description": "爱问医生整体网站",
-  "author": "xinxian.mu@pingcl.com",
+  "author": "lihong.li@pingcl.com",
   "repository": {
     "type": "git",
-    "url": "https://git.dev.wenwo.com/muxinxian/aiwen-user-h5.git"
+    "url": "https://git.dev.wenwo.com/lilihong/aiwen-user-h5.git"
   },
   "private": true,
   "scripts": {
