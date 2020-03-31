@@ -1,0 +1,127 @@
+@assets: "~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less"; //科室信息
+
+.wrapper{
+  background: url(./images/bg_download@2x.png) no-repeat 0 0;
+  background-size: 750/@r auto;
+  min-height: 3136/@r;
+}
+.header{
+  height: 88/@r;
+  background-color: #fff;
+  display: flex;
+  position: relative;
+  h2{
+    flex: 1;
+    overflow: hidden;
+    padding: 0 100/@r;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 88/@r;
+    text-align: center;
+    font-size: 32/@r;
+    color: #2D2D2D;
+    font-weight: bold;
+  }
+  .arrow{
+    position: absolute;
+    left: 5/@r;
+    top: 2/@r;
+    display: block;
+    width: 80/@r;
+    height: 80/@r;
+    background: url(./images/nav_back@2x.png) no-repeat;
+    background-size: 80/@r 80/@r;
+  }
+}
+.version_box{
+  .logo,.logo img{
+    width: 328/@r;
+    height: 194/@r;
+    display: block;
+    margin: 140/@r auto 0;
+  }
+  p{
+    font-size: 12px;
+    color: #AEB1B6;
+    text-align: center;
+  }
+}
+
+.down_txt{
+  padding-top: 36/@r;
+  img{
+    display: block;
+    width: 308/@r;
+    // height: 54/@r;
+    margin: 0 auto;
+  }
+  p{
+    font-size: 30/@r;
+    color: #858A8F;
+    letter-spacing: 16/@r;
+    text-align: center;
+    padding-top: 28/@r;
+  }
+}
+
+.btn_box{
+  padding: 0 50/@r;
+  margin-top: 132/@r;
+  a{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #2688FC;
+    color: #fff;
+    font-size: 32/@r;
+    height: 92/@r;
+    line-height: 92/@r;
+    border-radius: 4/@r;
+    padding: 0;
+    box-shadow:0px 6px 20px 2px rgba(38,136,252,0.2);
+
+    &.white{
+      background-color: #fff;
+      color: #2688FC !important;
+    }
+  }
+  p{
+    font-size: 26/@r;
+    text-align: center;
+    color: #AFBED0;
+    line-height: 36/@r;
+    padding-top: 28/@r;
+  }
+  &.bottom{
+    margin-top: -142/@r;
+    position: relative;
+  }
+}
+.img_box{
+  padding-top: 100/@r;
+  height: 2174/@r;
+  img{
+    display: block;
+  }
+}
+
+  .wechatImg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9998;
+    background-color: rgba(0, 0, 0, .3);
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+    img {
+      width: 200px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }

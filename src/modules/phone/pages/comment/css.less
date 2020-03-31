@@ -1,0 +1,192 @@
+@assets: "~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less"; //科室信息
+
+.app_wrapper_inner{
+  min-height: 100vh;
+}
+.order_content {
+  padding: 30/@r;
+  box-sizing: border-box;
+}
+
+.order_doctor {
+  display: flex;
+  margin-bottom: 60/@r;
+
+  .doctor_avatar {
+    width: 96/@r;
+    height: 96/@r;
+    border-radius: 50%;
+    margin-right: 22/@r;
+    background: #E8ECEF;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .doctor_info {
+    font-size: 24/@r;
+    color: #666666;
+
+    .doctor_info_t {
+      display: flex;
+      color: #282828;
+      line-height: 44/@r;
+      margin-bottom: 10/@r;
+    }
+
+    .doctor_name {
+      font-size: 32/@r;
+      font-weight: 600;
+      margin-right: 24/@r;
+    }
+
+    .doctor_info_b {
+      display: flex;
+      overflow: hidden;
+    }
+
+    .doctor_depart {
+      margin-right: 24/@r;
+      flex-shrink: 0;
+    }
+
+    .doctor_address {
+      flex: 1;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}
+
+.comment_form_rate {
+  margin-bottom: 60/@r;
+
+  .rate_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 24/@r;
+
+    &.active {
+      .rate_item_active {
+        background: url("./images/comment_icon_star@2x.png") no-repeat center center;
+        background-size: 48/@r;
+      }
+
+      .rate_tips {
+        color: #FFC516;
+      }
+    }
+
+    .rate_list {
+      display: flex;
+      height: 48/@r;
+      width: 376/@r;
+      margin-bottom: 24/@r;
+    }
+
+    .rate_item {
+      background: url("./images/comment_icon_star_non@2x.png") no-repeat center center;
+      background-size: 48/@r;
+      flex: 1;
+      padding: 0 14/@r;
+      cursor: pointer;
+    }
+
+    .rate_tips {
+      color: #D4D6DA;
+    }
+  }
+}
+
+.comment_form_tag {
+  margin-bottom: 6/@r;
+
+  .comment_tag_list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10/@r 0 34/@r ;
+    box-sizing: border-box;
+
+    .comment_tag_item {
+      width: 190/@r;
+      height: 50/@r;
+      border: 2/@r solid #D6D6D6;
+      border-radius: 4/@r;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24/@r;
+      color: #666666;
+      background: #ffffff;
+      margin-right: 24/@r;
+      margin-bottom: 24/@r;
+      flex-shrink: 0;
+      box-sizing: border-box;
+
+      &:nth-child(3n) {
+        //margin-right: 0;
+      }
+
+      &.active {
+        border-color: #2688FC;
+        color: #2688FC;
+        background: rgba(38, 136, 252, 0.1);
+      }
+    }
+  }
+}
+.comment_form_con {
+  textarea {
+    background: #F6F7FA;
+    padding: 30/@r;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 510/@r;
+    color: #2D2D2D;
+    font-size: 28/@r;
+    line-height: 40/@r;
+    border-radius:10/@r;
+    box-sizing: border-box;
+    &::placeholder {
+      color: #AEB1B6;
+    }
+  }
+}
+
+
+.btn_fixed{
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: env(safe-area-inset-bottom);
+  .btn_blue{
+    display: inline-block;
+    width: 100%;
+    height: 80/@r;
+    color: #fff;
+    background-color: #2688FC;
+    font-size: 30/@r;
+    line-height: 80/@r;
+    text-align: center;
+    border-radius: 4/@r;
+    &.disabled{
+      background-color: rgba(38, 136, 252, 0.4);
+    }
+  }
+  .btn_fixed_wrapper{
+    height: 80/@r;
+    padding: 18/@r;
+  }
+}
+

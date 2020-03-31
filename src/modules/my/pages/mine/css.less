@@ -1,0 +1,370 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+@r: 75rem; //icons
+.icon_smes {
+  display: inline-block;
+  width: 30/@r;
+  height: 30/@r;
+  vertical-align: baseline;
+  position: relative;
+  top: 3px;
+  background: url('images/icon-lett@3x.png') no-repeat center;
+  .background-size(100% auto);
+}
+.icon_sms {
+  display: inline-block;
+  width: 30/@r;
+  height: 30/@r;
+  vertical-align: baseline;
+  position: relative;
+  top: 3px;
+  background: url('images/icon-mes@3x.png') no-repeat center;
+  .background-size(100% auto);
+}
+
+.icon{
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+  top: 3px;
+}
+.icon-coin {
+  background: url('images/icon-coin@3x.png') no-repeat;
+  .background-size(24/@r auto);
+  width: 24/@r;
+  height: 24/@r;
+}
+.icon-local {
+  background: url('images/icon-local@3x.png') no-repeat;
+  .background-size(22/@r auto);
+  width: 22/@r;
+  height: 28/@r;
+}
+.icon-sex {
+  background: url('images/icon-sex@3x.png') no-repeat;
+  .background-size(24/@r auto);
+  width: 24/@r;
+  height: 24/@r;
+  &.boy{
+    background: url('images/icon-sex-m@2x.png') no-repeat;
+    .background-size(24/@r auto);
+  }
+}
+
+.user-info-wrapper {
+  background:url('./images/bg_top_clinic@2x.png') no-repeat center top;
+  background-color: #f8f8f836;
+  // background-size:750/@r 318/@r;
+  background-size:contain;
+  height: 318/@r;
+  padding: 0 15px 0;
+  position: relative;
+  .user-info {
+    .align-items(center);
+  }
+  .avater{
+    img {
+    width: 100%;
+    height: 100%;
+    .border-radius(50%);
+    }
+  }
+  .other-wrapper {
+    position: relative;
+    text-align: center;
+    b img {
+      display: inline-block;
+      width: 30/@r;
+      height: auto;
+      margin-left: 5px;
+    }
+  }
+  .nick-name {
+    .font_2xl;
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    line-height:88/@r;
+    text-align: center;
+    display: block;
+    margin-bottom: 30/@r;
+
+    img{
+      width: 26/@r;
+      height: 26/@r;
+      vertical-align: middle;
+      margin-left: 10px;
+      position:relative;
+      top: -3px;
+    }
+  }
+  .avater {
+    width: 90/@r;
+    height: 90/@r;
+    margin:36/@r auto 10/@r;
+    position: relative;
+    .lv {
+      width: 76/@r;
+      height: 28/@r;
+      .border-radius(14/@r);
+      border: solid 1px @main_c;
+      .font_s;
+      background-color: @main_c;
+      color: #fff;
+      padding: 0 0x;
+      position: absolute;
+      left: 50%;
+      margin-left: -38/@r;
+      bottom: 0;
+      right: 0;
+      text-align: center;
+    }
+  }
+  .u-other {
+    display: flex;
+    color: #49aeff;
+    .font_l;
+    span{
+      flex: 1;
+    }
+  }
+  .integral_link {
+    .score {
+      .font_l;
+      color: #49aeff;
+      position: relative;
+      top: 2px;
+    }
+    .icon-coin {
+      margin-left: 0;
+      margin-right: 5px;
+    }
+  }
+}
+
+.my-messages{
+  display: flex;
+  border-top: 10px solid @bor_c;
+  border-bottom: 10px solid @bor_c;
+  a{
+    padding: 10px 10px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    span.mine{
+      flex:2;
+    }
+    span.c_main{
+      text-align: right;
+      flex:1;
+    }
+  }
+}
+
+.u-c-nav {
+  .flexbox();
+  border-top: 1px solid @bor_c;
+  border-bottom: 1px solid @bor_c;
+  background-color: #fff;
+  .nav-item {
+    .flex(1);
+    text-align: center;
+    padding: 15px 0px 0px;
+    .box-sizeing(border-box);
+    .item_wrapper {
+      width: 70%;
+      border-bottom: 2px solid #fff;
+      padding: 0 0 15px;
+      margin: 0 auto;
+    }
+    .num {
+      padding: 5px 0px 10px 0px;
+      color: #333;
+      .font_3xl; // font-weight: bold;
+    }
+    .tabname {
+      .font_l;
+      color: #A9A9A9;
+    }
+    &.router-link-active {
+      .num {
+        color: @main_c;
+      }
+      .tabname {
+        color: @main_c;
+      }
+      .item_wrapper {
+        border-bottom: 3px solid @main_c;
+      }
+    }
+  }
+}
+
+.user-info-wrapper {
+  .focus-btn {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    .font_xl;
+    .transform(translateY(-25px));
+    .font_xl;
+    display: inline-block;
+    width: 120/@r;
+    text-align: center;
+    border: 1px solid @main_c;
+    line-height: 45/@r;
+    .border-radius(14px);
+    color: @main_c;
+    .transition(all .3s ease 0s);
+    &.disable {
+      border: 1px solid #999;
+      background-color: #fff;
+      color: #999;
+    }
+  }
+}
+
+
+.me_list2 {
+    border-top: 1px solid #eee;
+    // margin-top: 10px;
+    background-color: #fff;
+    font-size: 16px;
+}
+.me_list2 li {
+    line-height: 43px;
+    height: 43px;
+    border-bottom: 1px solid #eee;
+}
+.me_list2 li a {
+    display: flex;
+    padding: 0 10px;
+}
+.me_list2 li span {
+    flex: 1;
+    display: block;
+}
+.me_list2 li i.bread {
+  background-color: #49aeff;
+  color: #fff;
+  text-align: center;
+  border-radius: 15px;
+  margin-right: 15px;
+  flex: none;
+  height: 14px;
+  min-width: 14px;
+  margin-top: 9px;
+  padding: 5px;
+  line-height: 14px;
+  font-size: 12px;
+}
+.me_list2 li span em {
+    background: url(./images/icon-star@3x.png) no-repeat;
+    background-size: 32/@r auto;
+    float: left;
+    width: 32/@r;
+    height: 32/@r;
+    margin-right: 10px;
+    margin-top: 12px;
+
+    &.service {
+      background: url(./images/icon-service@3x.png) no-repeat;
+      background-size: 32/@r 32/@r;
+    }
+    &.sub {
+      background: url(./images/icon-viedo@3x.png) no-repeat;
+      background-size: 32/@r 32/@r;
+    }
+    &.scribe {
+      background: url(./images/icon-ssr@3x.png) no-repeat;
+      background-size: 32/@r 32/@r;
+    }
+    &.col {
+      background: url(./images/icon-star@3x.png) no-repeat;
+      background-size: 32/@r 32/@r;
+    }
+    &.doc {
+      background: url(./images/icon-doc@3x.png) no-repeat;
+      background-size: 32/@r 32/@r;
+    }
+    &.xieyi {
+      background: url(./images/me_icon_deal@2x.png) no-repeat;
+      background-size: 32/@r 32/@r;
+    }
+    &.privaterule {
+      background: url(./images/me_icon_policy@2x.png) no-repeat;
+      background-size: 32/@r 32/@r;
+    }
+    &.message {
+      background: url(./images/icon-message.png) no-repeat;
+      background-size: 32/@r 32/@r;
+    }
+    &.edit {
+      background: url(./images/icon-edit.png) no-repeat;
+      background-size: 32/@r 32/@r;
+    }
+    &.account {
+      background: url(./images/icon-manage@3x.png) no-repeat;
+      background-size: 32/@r 32/@r;
+    }
+    &.about {
+    background-position: 0 -141px;
+    }
+    &.feedback {
+      background: url(./images/icon-advi@3x.png) no-repeat;
+      background-size: 32/@r 32/@r;
+    }
+    &.record {
+      background: url(./images/icon-jl@3x.png) no-repeat;
+      background-size: 32/@r 32/@r;
+    }
+    &.record {
+      background: url(./images/icon-xy@3x.png) no-repeat;
+      background-size: 32/@r 32/@r;
+    }
+}
+
+.me_list2 li b {
+    background: url(./images/arrow_r.png) no-repeat;
+    background-size: 8px auto;
+    width: 8px;
+    height: 14px;
+    margin-top: 14px;
+    display: block;
+}
+
+
+//医生下载按钮
+.download-app{
+  padding: 10px 0;
+  a{
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 auto;
+    // border:1px solid @main_c;
+    // border-radius: 10px;
+    color: #F6A31B;
+  }
+}
+
+@media screen and(min-device-width:760px) {
+  .user-info {
+    .nick-name {
+      font-size: 16px!important;
+    }
+  }
+  .u-c-nav .nav-item .tabname,
+  .u-c-nav .nav-item .num {
+    font-size: 16px!important;
+  }
+
+  .user-info-wrapper {
+    background: url(./images/bg_top_clinic@2x.png) no-repeat center top;
+    background-size: cover;
+  }
+  .user-info-wrapper .u-other{
+    color: #fff;
+  }
+}

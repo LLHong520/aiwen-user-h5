@@ -1,0 +1,51 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+//热门科室
+.hot-departments{
+  padding: 10px 10/@r;
+  .department-item{
+    width: 25%;
+    padding: 10px 0;
+    float: left;
+    text-align: center;
+    .item-avater{
+      margin: 0 auto;
+      width: 66/@r;
+      height: 66/@r;
+      img{
+        display: block;
+        width: 66/@r;
+        height: 66/@r;
+        border-radius: 50%;
+      }
+    }
+
+    .dep-name{
+      padding: 0px 0px;
+      margin: 10px 0;
+      .show_n_lines(1);
+      color: #222;
+      .font_xl;
+    }
+
+
+  }
+  .department-item.holder{
+    .item-avater{
+      background-color: @bor_c;
+      border-radius: 50%;
+      img{
+        background-color: @bor_c;
+      }
+    }
+
+    .dep-name{
+      background-color: @bor_c;
+      margin: 10px;
+      padding: 0;
+    }
+
+
+  }
+}

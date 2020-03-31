@@ -1,0 +1,76 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+.search-doctor{
+  padding:25px 20px;
+  text-align: center;
+}
+.search-doctor .title{
+  color:#222;
+  font-size: 15px;
+}
+.search-doctor .btn_wrapper{
+  margin-top:15px;
+  .btn{
+    background:linear-gradient(#35D5B0,#08BDA1);
+  }
+}
+.depart-list{
+  padding: 10px 0;
+  display: flex;
+}
+.depart-item{
+  width:25%;
+  a{
+    display: block;
+  }
+  .icon-wrapper{
+    width:46px;
+    height:46px;
+    text-align: center;
+    margin: 0 auto;
+    img{
+      width:100%;
+      height:100%;
+      border-radius:50%;
+      background:#f4f4f4;
+    }
+  }
+  .title{
+    text-align: center;
+    color:#222222;
+    font-size: 24/@r;
+    padding:5px 0;
+  }
+}
+.c-title {
+  font-size: 30/@r;
+  color: #222222;
+  font-weight: bold;
+}
+.department-list{
+  padding:0 15px;
+}
+.department-item{
+  a{
+    display: flex;
+  }
+  .content{
+    width:80%;
+    flex: 1;
+  }
+  .name{
+    color:#383838;
+    font-size: 28/@r;
+    padding: 10px 0 0px;
+  }
+  .desc{
+    color:#B7BBBF;
+    font-size:12px;
+    padding: 5px 0 10px;
+  }
+  .icon{
+    position: relative;
+    top:25px;
+  }
+}

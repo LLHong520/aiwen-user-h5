@@ -1,0 +1,68 @@
+@assets: "~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less"; //科室信息
+//====
+//相关视频
+
+.relative-movies {
+  margin-top: 10px;
+  padding-bottom: 10px;
+
+  li {
+    position: relative;
+    padding: 10px 10px;
+    border-bottom: 1px solid @bor_c;
+    // box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    // width: 328/@r;
+    white-space: normal;
+    a{
+      display: flex;
+    }
+    .item-avater {
+      width: 260/@r;
+      height: 180/@r;
+      margin-right: 10px;
+      overflow: hidden;
+      background-color: @bor_c;
+      display: flex;
+      img{
+        width: 100%;
+      }
+    }
+
+    .info_wrapper{
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .course-type {
+      .font_m;
+      display: inline-block;
+      background-color: rgba(66, 157, 242, 0.7);
+      padding: 0 5px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #fff;
+    }
+
+    .course-name {
+      line-height: 150%;
+      .show_n_lines(1);
+      margin: 10px 0;
+      .font_xl;
+      flex: 1;
+    }
+
+    .course-tip {
+      line-height: 150%;
+      color: #A9A9A9;
+      .show_n_lines(1);
+      margin: 0;
+      .font_m;
+      justify-content:flex-end;
+    }
+  }
+}

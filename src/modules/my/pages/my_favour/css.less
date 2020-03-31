@@ -1,0 +1,49 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+.favours_item {
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid @bor_c;
+  .item_content {
+    padding: 10px 0px;
+    font-size: 30/@r;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .item_info {
+    .flexbox();
+    color: #999;
+    .font_2xl;
+  }
+  .item_name {
+    .flex(3);
+    .font_s;
+  }
+  .view_num {
+    text-align: right;
+    .flex(1);
+    .font_s;
+  }
+}
+
+.article{
+  display: flex;
+  .item-article-img{
+    margin-left: 10px;
+    width: 140/@r;
+    height: 90/@r;
+    overflow: hidden;
+    background-color: @bor_c;
+  }
+  .item-con-wrapper{
+    overflow: hidden;
+    flex: 1;
+  }
+  .item_name img{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+  }
+}

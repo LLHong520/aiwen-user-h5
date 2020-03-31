@@ -1,0 +1,114 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+.block_title {
+  padding: 32/@r 0 20/@r;
+  border: 1px solid @bor_cob;
+  position: relative;
+  .font_l;
+  &.pb0 {
+    padding-bottom: 0;
+  }
+  span:nth-child(1) {
+    border-left: 10/@r solid @main_c;
+    padding-left: 18/@r;
+    display: inline-block;
+    color: @main_c;
+    .font_l;
+  }
+  .result-number {
+    float: right;
+    display: inline-block;
+    margin-right: 30/@r;
+    color: #999;
+    .font_s;
+    b {
+      font-weight: 500;
+      color: #4A90E2;
+      margin: 0 6/@r;
+    }
+  }
+}
+
+.title-sbor {
+  padding: 20px 0 10px;
+  border-bottom: 1px solid @bor_cob;
+}
+
+.hot_moments_wrapper {
+  position: relative;
+  border-bottom: 10/@r solid @bor_co;
+  .toogle_more {
+    background: #fff url('./images/icon-open@3x.png') no-repeat center;
+    height: 15px;
+    cursor: pointer;
+    .background-size(32px auto);
+    &.active {
+      background: #fff url('./images/icon-fold@3x.png') no-repeat center;
+      .background-size(32px auto);
+    }
+  }
+}
+
+.hot_moments_list {
+  text-align: left;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.hot_moments_item {
+  display: flex;
+  padding: 10px 10px;
+  align-items: center;
+  text-align: left;
+  justify-content:flex-start;
+  border-bottom: 1px solid @bor_c;
+  .font_xl;
+  position: relative;
+  text-align: center;
+  a {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #666;
+    .font_l;
+  }
+  .item_avater {
+    width: 97/@r;
+    margin: 0 auto;
+    margin-right: 15px;
+    img {
+      width: 97/@r;
+      .border-radius(50%);
+    }
+  }
+  .item_info {
+    .flex(1);
+    text-align: left;
+    line-height: 40px;
+  }
+  .item_img {
+    // width: 100/@r;
+    // height: 100/@r;
+    overflow: hidden;
+    text-align: center;
+    img {
+      height: 100%;
+      max-width: none;
+    }
+  }
+
+  &::after{
+    position: absolute;
+    content: "";
+    background: url(./images/arrow_r.png) no-repeat;
+    background-size: 8px auto;
+    right: 15px;
+    top: 50%;
+    margin-top: -7px;
+    width: 8px;
+    height: 14px;
+    display: block;
+  }
+}

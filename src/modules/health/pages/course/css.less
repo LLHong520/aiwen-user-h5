@@ -1,0 +1,179 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+.activity_wrapper_inner {
+    position: relative;
+}
+.famous_doctor {
+  background-color: #fff;
+  padding: 15px 10px;
+  display: flex;
+  border-bottom: 10/@r solid @bor_cob;
+}
+
+.famous_doctor dt {
+  width: 176/@r;
+  height: 176/@r;
+  overflow: hidden;
+  position: relative;
+}
+
+.famous_doctor dd a{
+  display: flex;
+  flex-direction: column;
+  height: 176/@r;
+}
+.famous_doctor dt a img {
+  width: 176/@r;
+  height: 176/@r;
+  display: block;
+}
+
+.famous_doctor dt b{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -10px;
+  margin-left: -8px;
+  background: url(./images/icon-play@2x.png) no-repeat;
+  background-size: 16px auto;
+  width: 16px;
+  height: 20px;
+}
+
+.famous_doctor dt span.number{
+  display: block;
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  height:44/@r;
+  line-height: 44/@r;
+  background:rgba(3,3,3,0.3);
+  .font_xl;
+  color:#fff;
+  width:100%;
+  text-align: center;
+}
+
+.famous_doctor dt span.mask{
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  line-height: 35/@r;
+  background:#30C443;
+  .font_s;
+  color:#fff;
+  padding:0 4px;
+}
+
+.famous_doctor dt span img {
+  width: 17px;
+  height: 16px;
+}
+
+.famous_doctor dd {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  box-flex: 1;
+  flex: 1;
+  margin-left: 30/@r;
+  overflow: hidden;
+  position: relative;
+  position: relative;
+}
+
+.fam_doc_name {
+  .font_xl;
+}
+
+.fam_doc_name span {
+  margin-right: 10px;
+  color: #383838;
+  .show_n_lines(2);
+}
+.fam_doc_name .price_mark{
+  display: inline-block;
+  background: #FF652A;
+  color:#fff;
+  font-size: 12px;
+  padding:0 4px;
+  margin: 5px 0 0 0;
+  border-radius: 4px;
+}
+.fam_doc_dep {
+  position: absolute;
+  bottom:2px;
+  left:0;
+  color: #666;
+  width:100%;
+  // display:flex;
+  // justify-content:between;
+  // margin-top: 8px;
+  // white-space: nowrap;
+  // text-overflow: ellipsis;
+  // overflow: hidden;
+  font-size: 14px;
+  .courseStatue{
+    float: left;
+    color:#B7BBBF;
+    .font_l;
+    &.opening{
+      color:#4296FE;
+      .font_s;
+    }
+  }
+  .c_free{
+    color:@main_c;
+    .font_xl;
+  }
+  .del-price{
+    color:#979797;
+    .font_s;
+  }
+}
+
+.fam_doc_dep span {
+  flex: 1;
+  &:nth-of-type(2){
+    text-align:right;
+  }
+}
+
+.fam_doc_good {
+  color: #646464;
+  margin-top: 8px;
+  margin-right: 10px;
+  line-height: 18px;
+  font-size: 14px;
+  height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  .courseStatue{
+    color: @main_c;
+  }
+}
+
+.fam_doc_talk {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.fam_doc_talk i ,fam_doc_dep i{
+  color: @main_c;
+  display: block;
+  width: 120px;
+  height: 19px;
+  line-height: 19px;
+  text-align: right;
+}
+.position_price{
+  float: right;
+  display: flex;
+  flex-direction:column;
+  align-items:flex-start;
+}

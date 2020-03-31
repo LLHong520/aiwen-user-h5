@@ -1,0 +1,450 @@
+@charset "utf-8";
+@import 'flex.less';
+@import 'base.less';
+@import 'fix.less';
+//iconfonts====================
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?s1kiyf');
+  src: url('../fonts/icomoon.eot?s1kiyf#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?s1kiyf') format('truetype'), url('../fonts/icomoon.woff?s1kiyf') format('woff'), url('../fonts/icomoon.svg?s1kiyf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-message:before {
+  content: "\e900";
+  font-size: 40px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .5);
+  padding: 5px;
+  .border-radius(50%);
+}
+
+.icon-add:before {
+  content: "\e900";
+}
+
+.icon-arrow_down:before {
+  content: "\e901";
+}
+
+.icon-arrow_right:before {
+  content: "\e902";
+}
+
+.icon-arrow_up:before {
+  content: "\e903";
+}
+
+.icon-checkbox_check:before {
+  content: "\e904";
+  color: #18a689;
+}
+
+.icon-checkbox_nocheck:before {
+  content: "\e905";
+}
+
+.icon-reply:before {
+  content: "\e906";
+}
+
+.icon-del:before {
+  content: "\e907";
+}
+
+.icon-ding:before {
+  content: "\e908";
+}
+
+.icon-docs .path1:before {
+  content: "\e909";
+  color: rgb(75, 165, 255);
+}
+
+.icon-docs .path2:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(147, 203, 249);
+}
+
+.icon-docs .path3:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(75, 165, 255);
+}
+
+.icon-edit:before {
+  content: "\e90c";
+}
+
+.icon-expert:before {
+  content: "\e90d";
+}
+
+.icon-favour:before {
+  content: "\e90e";
+}
+
+.icon-focus:before {
+  content: "\e90f";
+}
+
+.icon-huge:before {
+  content: "\e910";
+}
+
+.icon-jiji:before {
+  content: "\e911";
+}
+
+.icon-jing:before {
+  content: "\e912";
+}
+
+.icon-jinghua:before {
+  content: "\e913";
+}
+
+.icon-jingpin:before {
+  content: "\e914";
+}
+
+.icon-label:before {
+  content: "\e915";
+}
+
+.icon-message:before {
+  content: "\e916";
+}
+
+.icon-more:before {
+  content: "\e917";
+}
+
+.icon-pinglun:before {
+  content: "\e918";
+}
+
+.icon-report:before {
+  content: "\e919";
+}
+
+.icon-setting:before {
+  content: "\e91a";
+}
+
+.icon-success:before {
+  content: "\e91b";
+}
+
+.icon-to_top:before {
+  content: "\e91c";
+}
+
+.icon-topic-down:before {
+  content: "\e91d";
+}
+
+.icon-topic-up:before {
+  content: "\e91e";
+}
+
+.icon-tuijian:before {
+  content: "\e91f";
+}
+
+.icon-view:before {
+  content: "\e920";
+  color: #ff6427;
+}
+
+.icon-warning:before {
+  content: "\e921";
+}
+
+.icon {
+  display: inline-block;
+}
+
+.icon20 {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+@7r: 75rem;
+.icon22 {
+  width: 36/@7r;
+  height: 36/@7r;
+  font-size: 36/@7r;
+  display: inline-block;
+  vertical-align: middle;
+  .background-size(36/@7r auto);
+  position: relative;
+  top: -2px;
+}
+
+.icon-menu {
+  display: inline-block;
+  background: url('../images/icons/icon_menu@3x.png') no-repeat;
+  .background-size(20px auto);
+  width: 20px;
+  height: 20px;
+  vertical-align: baseline;
+  position: relative;
+  top: 6px;
+}
+
+.icon_reply::before {
+  content: '';
+  .icon22;
+  background: url('../../assets/images/icons/icon_discuss@3x.png') no-repeat center;
+}
+
+.icon-view::before {
+  content: '';
+  .icon_bg_image('../images/icons/icon-eye-sm');
+  background-repeat: no-repeat;
+  background-position: center;
+  .icon22;
+}
+
+.icon-post {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: baseline;
+}
+
+.icon-del {
+  color: #999;
+}
+
+.icon-more {
+  color: #999;
+}
+
+.icon-topic-up {
+  color: #999;
+}
+
+.icon-topic-down {
+  color: #999;
+}
+
+.icon-search-big {
+  width: 39px;
+  height: 88/@r;
+  display: inline-block;
+  background: url('../images/icons/icon-search@3x.png') no-repeat center;
+  .background-size(39/@r 39/@r);
+}
+
+.icon-search {
+  float: right;
+  width: 26/@r;
+  height: 54/@r;
+  background: url('../images/icon-search@2x.png') no-repeat 0 13/@r;
+  background-size: 100%, 100%;
+}
+
+.icon-revoke {
+  width: 32/@r;
+  height: 34/@r;
+  display: inline-block;
+  background: url('../images/icons/icon-cancel@2x.png') no-repeat;
+  .background-size(100% 100%);
+}
+
+.icon-admin {
+  width: 32/@r;
+  height: 34/@r;
+  display: inline-block;
+  background: url('../images/icons/icon-setting@2x.png') no-repeat;
+  .background-size(100% 100%);
+}
+
+.icon-go {
+  width: 12/@r;
+  height: 21/@r;
+  background: url('../images/icons/icon-arrow-bk@2x.png') no-repeat center;
+  .background-size(100% auto);
+  display: inline-block;
+  margin-left: 20/@r;
+}
+
+.icon-go-color {
+  width: 12/@r;
+  height: 21/@r;
+  background: url('../images/icons/icon-arrow-gr@2x.png') no-repeat center;
+  .background-size(100% auto);
+  display: inline-block;
+  margin-left: 10/@r;
+}
+
+.icon-share {
+  width: 38/@r;
+  height: 34/@r;
+  background: url('../images/icons/icon-share@2x.png') no-repeat center;
+  .background-size(100% auto);
+  display: inline-block;
+  margin-right: 5/@r;
+}
+
+.icon-share_gray {
+  width: 80/@r;
+  height: 80/@r;
+  background: url('../images/icons/nav_share_pure1@2x.png') no-repeat center;
+  .background-size(100% auto);
+  display: inline-block;
+}
+
+.icon-down {
+  width: 18/@r;
+  height: 10/@r;
+  background: url('../images/icons/icon-arrow03.png') no-repeat center;
+  .background-size(100% auto);
+  display: inline-block;
+  margin-left: 5/@r;
+}
+
+.icon-up {
+  width: 18/@r;
+  height: 10/@r;
+  background: url('../images/icons/icon-arrow04.png') no-repeat center;
+  .background-size(100% auto);
+  display: inline-block;
+  margin-left: 5/@r;
+}
+
+.icon-uploadAdd {
+  width: 132/@r;
+  height: 132/@r;
+  background: url('../images/default/icon-camera@2x.png') no-repeat center;
+  .background-size(100% auto);
+  display: inline-block;
+  margin-right: 20/@r;
+}
+
+.icon-clct {
+  width: 28/@r;
+  height: 26/@r;
+  background: url('../images/icons/icon-clct@2x.png') no-repeat center;
+  .background-size(100% auto);
+  display: inline-block;
+  &.clcted {
+    background: url('../images/icons/icon-collect-sel@2x.png') no-repeat center !important;
+    .background-size(100% auto);
+  }
+}
+
+.icon-file {
+  width: 24/@r;
+  height: 26/@r;
+  background: url('../images/icons/Fill 1@2x.png') no-repeat center;
+  .background-size(100% auto);
+  display: inline-block;
+  margin-right: 20/@r;
+}
+
+.icon-zan {
+  width: 26/@r;
+  height: 26/@r;
+  background: url('../images/icons/icon-zan@2x.png') no-repeat center;
+  .background-size(100% auto);
+  display: inline-block;
+  &.liked {
+    background: url('../images/icons/icon_tips_jubao@3x.png') no-repeat center !important;
+    .background-size(100% auto);
+  }
+}
+
+.icon-refash {
+  width: 33/@r;
+  height: 36/@r;
+  background: url('../images/icons/icon-change@3x.png') no-repeat center;
+  .background-size(22/@r auto);
+  display: inline-block;
+  position: relative;
+  top: 4px;
+}
+
+.icon-more-heal {
+  width: 36/@r;
+  height: 34/@r;
+  background: url('../images/icons/arrow@2x.png') no-repeat center;
+  .background-size(32/@r auto);
+  display: inline-block;
+  position: relative;
+  top: 10px;
+}
+
+.icon-menu-heal {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background: url('../images/icons/icon-more@2x.png') no-repeat center;
+  .background-size(15px auto);
+  vertical-align: baseline;
+  background-color: #F4F8FA;
+}
+
+.jian-icon {
+  border: 1px solid #f28835;
+  color: #fff;
+  background-color: #f28835;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 0 3px;
+  font-size: 12px;
+  margin-right: 4px;
+}
+
+.icon-video-view {
+  width: 36/@r;
+  height: 26/@r;
+  background: url('../images/icons/icon-eye-sm@2x.png') no-repeat center;
+  .background-size(30/@r auto);
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+.icon-time {
+  width: 24/@r;
+  height: 24/@r;
+  background: url('../images/icons/icon-time@2x.png') no-repeat center;
+  .background-size(24/@r auto);
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+.icon-zan {
+  width: 26/@r;
+  height: 26/@r;
+  background: url('../images/icons/icon-zan@2x.png') no-repeat center;
+  .background-size(100% auto);
+  display: inline-block;
+  &.active {
+    background: url('../images/icons/icon-zan-chose@2x.png') no-repeat center;
+    .background-size(100% auto);
+  }
+}

@@ -1,0 +1,149 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+*{
+  word-break: break-all;
+}
+.header_wrapper {
+  .header .back{
+    display: block;
+    width: 80/@r;
+    height: 80/@r;
+    background: url(./images/nav_back@2x.png) no-repeat;
+    background-size: contain;
+    margin: 4/@r 0 0 10/@r;
+  }
+  .right {
+    width: 90/@r;
+  }
+}
+
+.entry_wrapper{
+  padding: 10/@r 30/@r 0;
+}
+
+.entry_hd{
+  line-height: 44/@r;
+  font-size: 32/@r;
+  color: #282828;
+  font-weight: bold;
+  padding: 30/@r 0;
+  i{
+    display: inline-block;
+    vertical-align: top;
+    width: 8/@r;
+    height: 24/@r;
+    background-color: #2688FC;
+    margin: 10/@r 16/@r 0 0;
+  }
+}
+
+.doc_card {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 8/@r 16/@r 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  padding: 30/@r;
+  border-radius: 8/@r;
+  margin-bottom: 64/@r;
+  border: 1px solid #F5F9FE;
+  .doc_info {
+    display: flex;
+    align-items: center;
+  }
+
+  .doc_img {
+    width: 116/@r;
+    height: 116/@r;
+    margin-right: 11px;
+    position: relative;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+    }
+  }
+
+  dl {
+    font-size: 12px;
+    color: #666;
+    line-height: 44/@r;
+    flex: 1;
+
+    dt {
+      color: #2D2D2D;
+    }
+
+    dd {
+      .show_n_lines(1);
+    }
+
+    .name {
+      font-size: 32/@r;
+      color: #2D2D2D;
+      font-weight: bold;
+    }
+  }
+
+  dl.nopt {
+    padding-top: 5/@r;
+    width: 0;
+    overflow: hidden;
+  }
+
+  .good_at {
+    color: #999;
+    line-height: 20px;
+    font-size: 12px;
+    padding-top: 14px;
+    .show_n_lines(2);
+  }
+
+  .endorsement{
+    height: 68/@r;
+    line-height: 68/@r;
+    text-align: center;
+    font-size: 20/@r;
+    color: #2D2D2D;
+    margin: 24/@r -30/@r -30/@r;
+    border-radius: 0 0 8/@r 8/@r;
+    background: linear-gradient(270deg,rgba(250,252,255,1) 0%,rgba(243,248,255,1) 100%);
+    a{
+      color: #2688FC;
+    }
+    i{
+      display: inline-block;
+      width: 36/@r;
+      height: 36/@r;
+      background: url(./images/clinic_icon_check@2x.png) no-repeat;
+      background-size: contain;
+      vertical-align: top;
+      margin:16/@r 12/@r 0 0;
+    }
+  }
+}
+
+.entry_content{
+  font-size: 32/@r;
+  color: #282828;
+  line-height: 56/@r;
+  padding-bottom: 60/@r;
+  overflow: hidden;
+  /deep/img{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    transform: rotate(0deg)!important;
+    margin-bottom: 5px;
+  }
+}
+
+.bottom {
+  font-size: 24/@r;
+  color: #CFCFCF;
+  background-color: #F6F7FA;
+  padding: 60/@r 0;
+  text-align: center;
+}

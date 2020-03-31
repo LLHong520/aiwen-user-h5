@@ -1,0 +1,231 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+.online-course{
+  // white-space: nowrap;
+  // margin: 20/@r 18/@r 0;
+  // display: flex;
+  // justify-content: space-between;
+  padding-right: 10px;
+  li{
+    display: block;
+    position: relative;
+    // box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    // width: 352/@r;
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    white-space: normal;
+    .item-avater{
+      // width: 352/@r;
+      height: 198/@r;
+      overflow:hidden;
+      background-color: @bor_c;
+    }
+    .course-name{
+      padding: 18/@r 32/@r 18/@r 12/@r;
+      margin-bottom: 9/@r;
+      p {
+        height: 76/@r;
+        line-height: 150%;
+        .show_n_lines(2);
+        .font_xl;
+      }
+    }
+  }
+}
+.cloumn-tab {
+  width: 100%;
+  height: 98/@r;
+  background-color: #fff;
+  line-height: 98/@r;
+  position: fixed;
+  top: 0;
+  z-index: 500;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30/@r;
+    .shouye{
+      font-size: 26/@r;
+    }
+    li {
+      color: #ACACAC;
+      display: block;
+      height: 98/@r;
+      text-align: center;
+      position: relative;
+      a {
+        font-size: 26/@r;
+      }
+    }
+    .active {
+      a {
+        color: @main_c;
+      }
+      span {
+        color: @main_c;
+      }
+    }
+    .active:after {
+      content: "";
+      position: absolute;
+      bottom: -2/@r;
+      left: 50%;
+      margin-left: -32/@r;
+      width: 64/@r;
+      background-color: @main_c;
+      height: 8/@r;
+      border-radius: 8/@r;
+    }
+    .filter{
+      display: block;
+      width: 40/@r;
+      height: 36/@r;
+      background: url('~@/assets/images/selectBtn.png') no-repeat;
+      margin: 32/@r 30/@r 0 74/@r;
+    }
+  }
+}
+.selected-column {
+  position: relative;
+  border-top:118/@r solid #F7F7F7;
+  padding-top: 42/@r;
+  padding-bottom: 80/@r;
+  text-align: center;
+  z-index: 0;
+}
+.selected-column ul{
+  display: inline-block;
+  padding-left: 8/@r;
+}
+.selected-column ul li{
+  display: inline-block;
+  font-size: 34/@r;
+  color: #222222;
+  font-weight: 600;
+  margin-right: 8/@r;
+}
+.selected-column ul li:before{
+  content: "·";
+  font-size: 34/@r;
+  color: #222222;
+  font-weight: 600;
+}
+.selected-column ul li:first-child:before{
+  display: none;
+}
+.selected-column .reorder{
+  display: inline-block;
+  position: absolute;
+  right: 32/@r;
+  bottom: 24/@r;
+}
+.selected-column .reorder span{
+  color: #ACACAC;
+  font-size: 24/@r;
+  font-family: PingFangSC;
+}
+.selected-column .reorder span:first-child{
+  margin-right: 36/@r;
+}
+.selected-column .reorder span.active{
+  color: #119B82;
+}
+.cloumn-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 1110;
+}
+.cloumn-menu {
+  position:fixed;
+  top: 0;
+  right: 0;
+  width: 200/@r;
+  height: 100%;
+  background-color: #5E5E5E;
+  z-index: 1111;
+  .cloumn-menu-list {
+    li {
+      text-align: center;
+      p {
+        color: #ffffff;
+        font-size: 30/@r;
+        line-height: 80/@r;
+      }
+    }
+    li:first-child {
+      p {
+        color: #a8a8a8;
+        margin: 20/@r 0 0;
+      }
+    }
+    .active {
+      p {
+        color: #7FFFED;
+      }
+    }
+  }
+}
+//动画效果
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-out .5s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes bounce-out {
+   0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+.fade-enter-active {
+  animation: fade-in .5s;
+}
+.fade-leave-active {
+  animation: fade-out .5s;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+@keyframes fade-out {
+   0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: @m){
+  .online-course{
+    li{width: 25%;}
+  }
+}

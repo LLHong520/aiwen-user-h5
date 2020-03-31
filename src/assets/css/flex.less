@@ -1,0 +1,63 @@
+/* MIXINS */
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.flexbox(@dir:row, @justifycontent:flex-start) {
+  display:flex;
+}
+
+.flexdirection(@dir:row) when(@dir = row) {
+  -webkit-box-orient:horizontal;
+  -moz-box-orient:horizontal;
+  -ms-box-orient:horizontal;
+}
+.flexdirection(@dir:row) when(@dir = column) {
+  -webkit-box-orient:vertical;
+  -moz-box-orient:vertical;
+  -ms-box-orient:vertical;
+}
+.flexdirection(@dir) {
+  flex-direction:@dir;
+}
+
+.flexjustify(@jc: flex-start) when(@jc = flex-start) {
+  -webkit-box-pack:start;
+  -moz-box-pack:start;
+  -ms-box-pack:start;
+}
+.flexjustify(@jc: flex-start) when(@jc = flex-end) {
+  -webkit-box-pack:end;
+  -moz-box-pack:end;
+  -ms-box-pack:end;
+}
+.flexjustify(@jc: flex-start) when(@jc = space-between) {
+  -webkit-box-pack:justify;
+  -moz-box-pack:justify;
+  -ms-box-pack:justify;
+}
+.flexjustify(@jc) {
+  -webkit-justify-content:@jc;
+  justify-content:@jc;
+}
+
+.flex(@var: 1, @total: 1) {
+  flex:@var;
+}
+
+.order(@number){
+  order: @number;
+}
+
+.align-items(@type){
+  align-items:@type;
+}

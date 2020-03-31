@@ -1,0 +1,44 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+.favours_item {
+  padding: 15px;
+  background-color: #fff;
+  border-bottom: 1px solid @bor_c;
+  color: #555;
+  .item_content {
+    padding: 0px 0px 10px;
+    .font_2xl;
+    line-height: 130%;
+  }
+  .item_reply_con {
+    background-color: #eeeeee;
+    padding: 10px;
+    .font_xl;
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: ' ';
+      border: 5px solid transparent;
+      border-bottom: 5px solid #eee;
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: -10px;
+      left: 5px;
+    }
+  }
+  .item_info {
+    padding-top: 10px;
+    .font_s;
+    .flexbox();
+    color: #999;
+  }
+  .item_name {
+    .flex(3);
+  }
+  .view_num {
+    text-align: right;
+    .flex(1);
+  }
+}

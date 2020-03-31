@@ -1,0 +1,35 @@
+span.play{
+  font-size: 16px;
+}
+@keyframes run {
+  0% {
+    background-position: -15px 0;
+  }
+
+  25% {
+    background-position: -64px 0;
+  }
+
+  75% {
+    background-position: -108px 0;
+  }
+
+  100% {
+    background-position: -150px 0;
+  }
+}
+
+.audio-block {
+  width: 32px;
+  height: 49px;
+  background: url(./yuyin.png) no-repeat -15px 0;
+}
+.audio-block.playing {
+  animation: run 1s steps(1, start) infinite;
+  -webkit-animation: run 1s steps(1, start) infinite;
+}
+
+li{
+  padding: 10px;
+  border-bottom: 1px solid #ededed;
+}

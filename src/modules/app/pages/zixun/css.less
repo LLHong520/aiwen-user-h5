@@ -1,0 +1,68 @@
+@assets: "~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less"; //科室信息
+.zixun_list{
+  background-color: #fff;
+  padding: 0 15px;
+  li{
+    a{
+      display: flex;
+      padding: 32/@r 0;
+    }
+    border-bottom: 1px solid #f8f8f8;
+    &:last-child{border:0;}
+  }
+  .img{
+    width: 72/@r;
+    height: 72/@r;
+    margin-right: 20/@r;
+    padding-top: 7/@r;
+    img{
+      display: block;
+      width: 72/@r;
+      height: 72/@r;
+      border-radius: 72/@r;
+      background-color: #ddd;
+    }
+  }
+  .info{
+    flex: 1;
+    font-size: 28/@r;
+    line-height: 40/@r;
+    width: 0;
+    dt{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    dd{
+      display: flex;
+      font-size: 24/@r;
+      color: #666;
+      line-height: 34/@r;
+      padding-top: 12/@r;
+      .txt{
+        flex: 1;
+        width: 0;
+        .time{
+          color: #AEB1B6;
+          font-size: 24/@r;
+        }
+      }
+      .state{
+        font-size: 24/@r;
+        color: #AEB1B6;
+        padding-left: 15px;
+        .blue{
+          color: #4EB9FE;
+        }
+        .red{
+          color:#FB4343;
+        }
+        .grey{
+          color:rgb(160, 160, 160);
+        }
+      }
+    }
+  }
+}

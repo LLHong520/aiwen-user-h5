@@ -1,0 +1,132 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+
+.content_wrapper{border-bottom:10/@r solid @bor_co;padding:0 15px;}
+.title_more{
+  float: right;
+  margin-right:15px;
+  color:@main_c;
+  .font_s;
+  text-align: right;
+}
+.list-cover{
+  margin-bottom:60/@r;
+  .title{
+    color:#222222;
+    .font_xl;
+    .show_n_lines(1);
+    margin:16/@r 0;
+  }
+  .cover-img{
+    position: relative;
+    width:100%;
+  }
+  .info_status{
+    position: absolute;
+    top:0;
+    right:0;
+    display: inline-block;
+    padding:2/@r 8/@r;
+    background-color: @main_c;
+    color:#fff;
+    .font_s;
+  }
+  .info_time{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:70/@r;
+    color:#fff;
+    .font_s;
+    .flexbox();
+    .flexjustify(space-between);
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* 标准的语法 */
+    span{
+      display: inline-block;
+      padding:0 10px;
+      height:70/@r;
+      line-height:70/@r;
+      vertical-align: bottom;
+    }
+  }
+}
+
+//专题
+.subjects{
+  width: 100%;
+  // overflow-x:scroll;
+  // white-space: nowrap;
+  border-bottom: 10px solid @bor_c;
+  margin-top: 10px;
+  // display: flex;
+  li{
+    // display: inline-block;
+    float:left;
+    position: relative;
+    margin-left:3.5%;
+    padding: 0;
+    width: 45%;
+    white-space: normal;
+    padding-bottom: 10px;
+    a{
+      display: block;
+      box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    }
+    .item-avater{
+      width: 100%;
+      height: 184/@r;
+      overflow:hidden;
+      background-color: @bor_c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .course-type{
+      .font_m;
+      display: inline-block;
+      background-color: rgba(66, 157, 242, 0.7);
+      padding:0 5px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #fff;
+    }
+    .course-name{
+      color: #222;
+      height:80/@r;
+      padding: 0 5px;
+      line-height: 40/@r;
+      .show_n_lines(2);
+      margin: 10px 0;
+      .font_xl;
+    }
+  }
+}
+  // .subjects.two{
+  //   display: flex;
+  //   justify-content: space-between;
+  //   li{
+  //     flex: 1;
+  //     margin:0 10px 0 10px;
+  //   }
+  //   li:nth-of-type(2){
+  //     margin-left: 5px;
+  //   }
+  // }
+  @media screen and (min-width: @m){
+    .subjects{
+      padding-right: 15px;
+      box-sizing: border-box;
+      li{
+        width: 25%;
+        margin-left: 0;
+        padding-left: 15px;
+        box-sizing: border-box;
+      }
+    }
+  }

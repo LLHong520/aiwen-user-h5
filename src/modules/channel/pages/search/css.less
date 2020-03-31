@@ -1,0 +1,91 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+
+.header{
+  height: 96/@r;
+  box-sizing: border-box;
+  padding: 12/@r 24/@r 12/@r 10/@r;
+  border-bottom: 1px solid #EFEFEF;
+  display: flex;
+  .back{
+    display: block;
+    width: 72/@r;
+    height: 72/@r;
+    background: url(./images/nav_back@2x.png) no-repeat;
+    background-size: contain;
+  }
+  input{
+    flex: 1;
+    width: 0;
+    box-sizing: border-box;
+    margin-top: 6/@r;
+    padding: 12/@r 20/@r 12/@r 64/@r;
+    height: 60/@r;
+    line-height: 36/@r;
+    display: block;
+    font-size: 24/@r;
+    color: #282828;
+    border: 1px solid #EFF2F7;
+    border-radius: 60/@r;
+    background: #F6F8FB url(./images/icon_search@2x.png) no-repeat 24/@r 12/@r;
+    background-size: 32/@r 32/@r;
+  }
+}
+
+.navlist{
+  padding-top: 24/@r;
+  height: 98/@r;
+  box-sizing: border-box;
+  border-bottom: 1px solid #EFEFEF;
+  position: relative;
+  margin-top: -1px;
+  background-color: #fff;
+  ul{
+    padding-left: 5/@r;
+  }
+  li{
+    display: inline-block;
+    height: 64/@r;
+    line-height: 64/@r;
+    font-size: 28/@r;
+    color: #666;
+    margin: 0 25/@r;
+    position: relative;
+    i{
+      display: block;
+      width: 24/@r;
+      height: 4/@r;
+      border-radius: 4/@r;
+      background-color: #2688FC;
+      position: absolute;
+      left: 50%;
+      margin-left: -12/@r;
+      bottom: 0;
+    }
+    &.active{
+      font-size: 32/@r;
+      color: #323232;
+      font-weight: bold;
+    }
+  }
+}
+
+.slide_item{
+  min-height: calc(100vh - 194/@r);
+  padding: 0 30/@r;
+}
+
+
+//文章列表
+
+
+//案例列表
+
+.bottom{
+  font-size: 24/@r;
+  color: #CFCFCF;
+  background-color: #F6F7FA;
+  padding: 60/@r 0;
+  text-align: center;
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/png" href="<%= htmlWebpackPlugin.options.static_base %>/static/favicon.ico" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-orientation" content="portrait">
+  <meta name="x5-page-mode" content="app">
+  <meta name="description" content="新浪健康，严肃医疗资讯平台，健康无忧" />
+  <meta name="keywords" content="新浪健康,爱问社区,社区,新浪爱问医生新浪健康,爱问社区,社区,新浪爱问医生,健康医疗,健康资讯,在线医疗,爱问医联,医疗资讯" />
+  <link href="<%= htmlWebpackPlugin.options.static_base %>/static/init/css.css" rel="stylesheet" />
+  <script src="<%= htmlWebpackPlugin.options.static_base %>/static/appDownloadConf.js?d=<%= new Date().getTime() %>">
+  </script>
+  <script>
+    ; (function (win, lib) {
+      var doc = win.document;
+      var docEl = doc.documentElement;
+      var metaEl = doc.querySelector("meta[name=\"viewport\"]");
+      var flexibleEl = doc.querySelector("meta[name=\"flexible\"]");
+      var dpr = 0;
+      var scale = 0;
+      var tid;
+      var flexible = lib.flexible || (lib.flexible = {});
+
+      if (metaEl) {
+        console.warn("将根据已有的meta标签来设置缩放比例");
+        var match = metaEl.getAttribute("content").match(/initial\-scale=([\d\.]+)/);
+        if (match) {
+          scale = parseFloat(match[1]);
+          dpr = parseInt(1 / scale);
+        }
+      } else if (flexibleEl) {
+        var content = flexibleEl.getAttribute("content");
+        if (content) {
+          var initialDpr = content.match(/initial\-dpr=([\d\.]+)/);
+          var maximumDpr = content.match(/maximum\-dpr=([\d\.]+)/);
+          if (initialDpr) {
+            dpr = parseFloat(initialDpr[1]);
+            scale = parseFloat((1 / dpr).toFixed(2));
+          }
+          if (maximumDpr) {
+            dpr = parseFloat(maximumDpr[1]);
+            scale = parseFloat((1 / dpr).toFixed(2));
+          }
+        }
+      }
+
+      if (!dpr && !scale) {
+        var isAndroid = win.navigator.appVersion.match(/android/gi);
+        var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+        var devicePixelRatio = win.devicePixelRatio;
+        if (isIPhone) {
+                // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+          if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {
+            dpr = 3;
+          } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)) {
+            dpr = 2;
+          } else {
+            dpr = 1;
+          }
+        } else {
+                // 其他设备下，仍旧使用1倍的方案
+          dpr = 1;
+        }
+        scale = 1 / dpr;
+      }
+
+      docEl.setAttribute("data-dpr", dpr);
+      if (!metaEl) {
+        metaEl = doc.createElement("meta");
+        metaEl.setAttribute("name", "viewport");
+        metaEl.setAttribute("content", "initial-scale=" + scale + ", maximum-scale=" + scale + ", minimum-scale=" + scale + ", user-scalable=no");
+        if (docEl.firstElementChild) {
+          docEl.firstElementChild.appendChild(metaEl);
+        } else {
+          var wrap = doc.createElement("div");
+          wrap.appendChild(metaEl);
+          doc.write(wrap.innerHTML);
+        }
+      }
+
+      function refreshRem() {
+        var width = docEl.getBoundingClientRect().width;
+        if (width / dpr > 540) {
+          width = 540 * dpr;
+        }
+        var rem = width / 10;
+        docEl.style.fontSize = rem + "px";
+        flexible.rem = win.rem = rem;
+      }
+
+      win.addEventListener("resize", function () {
+        clearTimeout(tid);
+        tid = setTimeout(refreshRem, 300);
+      }, false);
+      win.addEventListener("pageshow", function (e) {
+        if (e.persisted) {
+          clearTimeout(tid);
+          tid = setTimeout(refreshRem, 300);
+        }
+      }, false);
+
+      if (doc.readyState === "complete") {
+        doc.body.style.fontSize = 12 * dpr + "px";
+      } else {
+        doc.addEventListener("DOMContentLoaded", function (e) {
+          doc.body.style.fontSize = 12 * dpr + "px";
+        }, false);
+      }
+
+
+      refreshRem();
+      flexible.dpr = win.dpr = dpr;
+      flexible.refreshRem = refreshRem;
+      flexible.rem2px = function (d) {
+        var val = parseFloat(d) * this.rem;
+        if (typeof d === "string" && d.match(/rem$/)) {
+          val += "px";
+        }
+        return val;
+      };
+      flexible.px2rem = function (d) {
+        var val = parseFloat(d) / this.rem;
+        if (typeof d === "string" && d.match(/px$/)) {
+          val += "rem";
+
+        }
+        return val;
+      };
+
+    })(window, window["lib"] || (window["lib"] = {}));
+
+  </script>
+  <meta name="baidu-site-verification" content="M9qjnWHDUT" />
+  <title id="J_title">新浪健康</title>
+</head>
+<script>
+  //尝试跳出框架
+  if (window.parent !== window) {
+    try {
+      window.top.location.href = window.location.href;
+    } catch (error) {
+      // alert("跳出框架失败1");
+    }
+  };
+  if(window.top !== window.self){
+    console.log("被嵌套");
+    try {
+      // top.window.location.replace(window.location.href);
+      window.top.location.href = window.self.location.href;
+    } catch (error) {
+      // alert("跳出框架失败2");
+    }
+  }
+  //获取新浪健康App传递的参数
+  (function () {
+    var title = document.getElementById("J_title");
+    var UA = navigator.userAgent;
+    if (UA.indexOf(";app/") >= 0) {
+      title.innerHTML = "新浪健康";
+      var queryString = UA.split(";app/")[1];
+      var queryStringObj = null;
+      try {
+        queryStringObj = JSON.parse(queryString);
+        window.sessionStorage.setItem("aiwen_user_sinaAppQueryString", queryString);
+        var appToken = queryStringObj.appToken;
+        if (appToken && appToken != "") {
+          window.localStorage.setItem("aiwen_user_token", appToken);
+        }else{
+          window.localStorage.setItem("aiwen_user_token", "");
+        }
+      } catch (error) {
+        console.error("转换json失败");
+        console.error("queryString", queryString);
+        console.error(error);
+      }
+    }
+  })(window, document);
+</script>
+
+<body>
+  <div id="app"></div>
+  <!-- 加载动画 -->
+  <div id="loadingAnim">
+    <div id="loading_app">
+      <div class="loading">
+        <img width="24" height="24" src="<%= htmlWebpackPlugin.options.static_base %>/static/init/loading.gif" />
+      </div>
+    </div>
+  </div>
+  <!-- /加载动画 -->
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?be80a72ce8e8dea7f5e034c8edea95c1";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+
+  </script>
+  <!-- 爱问统计 -->
+  <script>
+    var _iwenq = _iwenq || [];
+    _iwenq.push(["_belongProduct", "USER-B-H5"]);
+    _iwenq.push(["_belongBusiness", "USER-B-H5-001"]);
+    _iwenq.push(["_productDictId", "9"]);
+    _iwenq.push(["_belongFunctionId", "GN-001"]);
+    //引用js
+    (function () {
+      var ma = document.createElement("script");
+      ma.type = "text/javascript";
+      // ma.src = "https://health.sina.cn/zt/static/iw.js";
+      ma.src = ("https:" == document.location.protocol ? "https://dc.chspu.com" : "http://dc.chspu.com") + "/iw/iw.0.0.9.min.js";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(ma, s);
+    })();
+  </script>
+  <!-- 爱问统计 -->
+
+<!-- Begin Inspectlet Asynchronous Code -->
+<script type="text/javascript">
+  (function () {
+    window.__insp = window.__insp || [];
+    __insp.push(["wid", 925531818]);
+    var ldinsp = function () {
+      if (typeof window.__inspld != "undefined") return;
+      window.__inspld = 1;
+      var insp = document.createElement("script");
+      insp.type = "text/javascript";
+      insp.async = true;
+      insp.id = "inspsync";
+      insp.src = ("https:" == document.location.protocol ? "https" : "http") +
+        "://cdn.inspectlet.com/inspectlet.js?wid=925531818&r=" + Math.floor(new Date().getTime() / 3600000);
+      var x = document.getElementsByTagName("script")[0];
+      x.parentNode.insertBefore(insp, x);
+    };
+    setTimeout(ldinsp, 0);
+  })();
+</script>
+<!-- End Inspectlet Asynchronous Code -->
+
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+  <!-- <script src="https://tjs.sjs.sinajs.cn/open/thirdpart/js/jsapi/mobile.js" charset="utf-8"></script> -->
+  <%=htmlWebpackPlugin.files.webpackManifest%>
+  <!-- built files will be auto injected -->
+</body>
+<script src="https://api.map.baidu.com/api?v=2.0&ak=eYf9sA6yVTFHlh9ytU4a0EYY"></script>
+<script>
+  // (function () {
+  //   var isIOS = window.navigator.userAgent.toLowerCase().indexOf("iphone") > 0 ? true:false;
+  //   if(!isIOS){
+  //     return;
+  //   }
+  //   var startY, endY;
+  //   //记录手指触摸的起点坐标
+  //   document.body.addEventListener('touchstart', function (e) {
+  //     startY = e.touches[0].pageY;
+  //   }, {passive: false});
+  //   document.body.addEventListener('touchmove', function (e) {
+  //     endY = e.touches[0].pageY;
+  //     //记录手指触摸的移动中的坐标
+  //     //手指下滑，页面到达顶端不能继续下滑
+  //     if (endY > startY && $(window).scrollTop() <= 0) {
+  //       e.preventDefault();
+  //     } //手指上滑，页面到达底部能继续上滑
+  //     if (endY < startY && $(window).scrollTop() + $(window).height() >= $('body')[0].scrollHeight) {
+  //       e.preventDefault();
+  //     }
+  //   }, {passive: false});
+  // })(window, document);
+  //去掉橡皮筋效果, {passive: false}
+
+</script>
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+
+</html>

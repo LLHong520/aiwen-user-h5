@@ -1,0 +1,29 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+
+.header_wrapper {
+  .header .back{
+    display: block;
+    width: 80/@r;
+    height: 80/@r;
+    background: url(./images/nav_back@2x.png) no-repeat;
+    background-size: contain;
+    margin: 4/@r 0 0 10/@r;
+  }
+  .right {
+    width: 90/@r;
+  }
+}
+
+.subject_wrapper {
+  padding: 0 30/@r;
+}
+.subject_list{
+  li{
+    border-bottom: 1px solid #EFEFEF;
+  }
+}
+.empty_box {
+  padding-top: 162/@r;
+}

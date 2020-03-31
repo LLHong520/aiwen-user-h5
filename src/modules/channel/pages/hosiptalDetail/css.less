@@ -1,0 +1,447 @@
+@assets: "~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+
+.header_wrapper {
+  .header .back {
+    display: block;
+    width: 80/@r;
+    height: 80/@r;
+    background: url(./images/nav_back@2x.png) no-repeat;
+    background-size: contain;
+    margin: 4/@r 0 0 10/@r;
+  }
+
+  .right {
+    width: 90/@r;
+    .share {
+      float: right;
+      width: 72/@r;
+      height: 72/@r;
+      margin-top: 8/@r;
+      margin-right: 8/@r;
+      background: url(./images/nav_share@2x.png);
+      background-size: contain;
+      display: block;
+    }
+  }
+}
+
+.box_wrapper {
+  padding: 0 30/@r;
+  background-color: #fff;
+  padding-top: 1px;
+  overflow: hidden;
+
+  &.top10 {
+    border-top: 20/@r solid #F6F7FA;
+  }
+
+  .common_hd {
+    font-size: 30/@r;
+    line-height: 42/@r;
+    height: 74/@r;
+    padding-top: 32/@r;
+    display: flex;
+    box-sizing: border-box;
+
+    h3 {
+      flex: 1;
+      box-flex: 1;
+      width: 0;
+      font-weight: bold;
+      font-size: 30/@r;
+    }
+
+    .toMore {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: url(./images/btn_enter@2x.png) no-repeat center center;
+      background-size: 20px 20px;
+      position: relative;
+      right: -15px;
+      top: -10px;
+    }
+  }
+}
+.hospital_intro{
+  padding-top: 32/@r;
+}
+
+.subject_box {
+  padding: 30/@r 0;
+
+  ul {
+    li {
+      float: left;
+      width: 50%;
+      float: left;
+      box-sizing: border-box;
+
+      &:last-child {
+        padding-left: 11/@r;
+      }
+
+      &:first-child {
+        padding-right: 11/@r;
+        padding-left: 0;
+      }
+
+      a {
+        display: block;
+      }
+
+      .img {
+        width: 334/@r;
+        height: 190/@r;
+        position: relative;
+
+        img {
+          display: block;
+          width: 334/@r;
+          height: 190/@r;
+          border-radius: 8/@r;
+          object-fit: cover;
+        }
+
+        .icon_play {
+          display: block;
+          position: absolute;
+          width: 64/@r;
+          height: 64/@r;
+          left: 50%;
+          top: 50%;
+          margin-left: -32/@r;
+          margin-top: -32/@r;
+          background: url(./images/common_btn_play@2x.png) no-repeat;
+          background-size: contain;
+        }
+
+        p {
+          display: flex;
+          position: absolute;
+          padding: 0 12/@r;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 50/@r;
+          line-height: 50/@r;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+          color: #fff;
+          border-radius: 0 0 8/@r 8/@r;
+          font-size: 20/@r;
+
+          .author {
+            flex: 1;
+            width: 0;
+            .show_n_lines(1);
+          }
+        }
+      }
+
+      dl {
+        margin-top: 12/@r;
+
+        dt {
+          font-size: 28/@r;
+          font-weight: bold;
+          color: #282828;
+          line-height: 40/@r;
+          .show_n_lines(2);
+        }
+
+        dd {
+          font-size: 24/@r;
+          color: #999;
+          margin-top: 8/@r;
+          .show_n_lines(1);
+        }
+      }
+    }
+  }
+}
+
+.case_list {
+  li {
+    border-bottom: 1px solid #EFEFEF;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+.bottom {
+  font-size: 24/@r;
+  color: #CFCFCF;
+  background-color: #F6F7FA;
+  padding: 60/@r 0;
+  text-align: center;
+}
+
+.doctor_wrapper {
+  padding: 30/@r 0;
+  .swiper-container {
+    margin: 0 -15px;
+    padding: 0 15px;
+  }
+}
+.doctor_card {
+  height: 216/@r;
+  border:1px solid #EFEFEF;
+  border-radius: 8/@r;
+  padding: 30/@r 20/@r;
+  box-sizing: border-box;
+  dl {
+    dt,
+    dd {
+      .show_n_lines(1);
+      text-align: center;
+    }
+
+    dt {
+      font-size: 26/@r;
+      color: #282828;
+      line-height: 36/@r;
+      margin-top: 14/@r;
+    }
+
+    dd {
+      font-size: 20/@r;
+      line-height: 28/@r;
+      color: #999;
+      margin-top: 6/@r;
+    }
+  }
+
+  .img {
+    width: 72/@r;
+    height: 72/@r;
+    border-radius: 72/@r;
+    margin: 0 auto;
+
+    img {
+      display: block;
+      width: 72/@r;
+      height: 72/@r;
+      border-radius: 72/@r;
+    }
+  }
+
+}
+
+.hospital_banner{
+  .banner_img{
+    width: 750/@r;
+    height: 468/@r;
+  }
+  .banner_img img {
+    display: block;
+    width: 750/@r;
+    height: 468/@r;
+    object-fit: cover;
+  }
+  .swiper-pagination{
+    left: unset;
+    right: 20/@r;
+    bottom: 20/@r;
+    height: 42/@r;
+    font-size: 24/@r;
+    line-height: 42/@r;
+    border-radius: 42/@r;
+    color: #fff;
+    background: rgba(0, 0, 0, .4) url(./images/icon_img_s@2x.png) no-repeat 20/@r center;
+    background-size: 24/@r 22/@r;
+    padding-left: 54/@r;
+    box-sizing: border-box;
+    padding-right: 18/@r;
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.hospital_detail{
+  background-color: #fff;
+  padding: 0 30/@r 30/@r;
+  .logo{
+    width: 128/@r;
+    height: 128/@r;
+    margin: -64/@r auto 0;
+    position: relative;
+    z-index: 2;
+    img{
+      display: block;
+      width: 116/@r;
+      height: 116/@r;
+      border: 6/@r solid #fff;
+      border-radius: 128/@r;
+    }
+  }
+  .name{
+    font-size: 34/@r;
+    line-height: 48/@r;
+    padding: 30/@r 138/@r 0;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16/@r;
+    .show_n_lines(2);
+  }
+  .goodat{
+    line-height: 34/@r;
+    font-size: 24/@r;
+    color: #999;
+    padding-left: 50/@r;
+    background: url(./images/icon_good_s@2x.png) no-repeat;
+    background-size: 32/@r 32/@r;
+    margin-top: 44/@r;
+    .show_n_lines(2);
+  }
+  .contact{
+    display: flex;
+    margin-top: 44/@r;
+    align-items: center;
+    .txt{
+      flex: 1;
+      width: 0;
+    }
+    .address {
+      line-height: 34/@r;
+      font-size: 24/@r;
+      color: #2D2D2D;
+      padding-left: 50/@r;
+      padding-right: 54/@r;
+      .show_n_lines(2);
+      background: url(./images/icon_location_s@2x.png) no-repeat,url(./images/btn_enter@2x.png) no-repeat right center;
+      background-size: 32/@r 32/@r,40/@r 40/@r;
+    }
+    .phone {
+      width: 52/@r;
+      height: 52/@r;
+      padding: 8/@r 20/@r 8/@r 40/@r;
+      border-left: 1px solid #EFEFEF;
+      margin-left: 16/@r;
+      background: url(./images/btn_phone@2x.png) no-repeat 40/@r 8/@r;
+      background-size: 52/@r 52/@r;
+    }
+  }
+  
+}
+.comptyList{
+  padding-bottom: 30/@r;
+  padding-top: 32/@r;
+  li{
+    display: flex;
+    .img{
+      width: 96/@r;
+      height: 96/@r;
+      margin-right: 20/@r;
+      img{
+        display: block;
+        width: 96/@r;
+        height: 96/@r;
+        border-radius: 3px;
+        border: 1px solid #f3f3f3;
+        box-sizing: border-box;
+      }
+    }
+    dl{
+      flex: 1;
+      width: 0;
+      dt{
+        font-size: 28/@r;
+        font-weight: bold;
+        color: #2D2D2D;
+        margin-top: 10/@r;
+        line-height: 40/@r;
+        .show_n_lines(1);
+      }
+      dd{
+        font-size: 24/@r;
+        color: #AEB1B6;
+        margin-top: 4/@r;
+        line-height: 34/@r;
+      }
+    }
+    .enter{
+      width:128/@r;
+      height:50/@r;
+      line-height: 50/@r;
+      background:#F3F4F5;
+      border-radius:4/@r;
+      border:1px solid #EFEFEF;
+      box-sizing: border-box;
+      margin-top: 24/@r;
+      font-size: 24/@r;
+      line-height: 50/@r;
+      text-align: center;
+    }
+  }
+}
+.compty_wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 0 -30px;
+  padding-bottom: 30/@r;
+
+  ul {
+    white-space: nowrap;
+    padding-bottom: 0;
+    padding-left: 30px;
+  }
+
+  li {
+    width: 586/@r;
+    height: 128/@r;
+    box-sizing: border-box;
+    border: 1px solid #EFEFEF;
+    display: inline-block;
+    padding: 0;
+    margin-right: 16/@r;
+    border-radius: 6/@r;
+
+    .card_inner {
+      display: flex;
+      padding: 16/@r;
+    }
+
+    &:last-child {
+      border: 0;
+      width: 114/@r;
+    }
+  }
+}
+.phone_layer {
+  position: fixed;
+  width: 500/@r;
+  left: 50%;
+  top: 50%;
+  margin-left: -250/@r;
+  margin-top: -108/@r;
+  border-radius: 16/@r;
+  background-color: #fff;
+  z-index: 101;
+  li{
+    line-height: 108/@r;
+    border-bottom: 1px solid #EFEFEF;
+    text-align: center;
+    color: #007AFF;
+    a{
+      color: #007AFF;
+    }
+    font-size: 32/@r;
+    &:last-child{
+      border-bottom: 0;
+    }
+  }
+}
+
+.shadow {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .4);
+  z-index: 100;
+}

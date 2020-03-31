@@ -1,0 +1,212 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+.block_title {
+  padding: 32/@r 0 20/@r;
+  border: 1px solid @bor_cob;
+  position: relative;
+  .font_l;
+  &.pb0 {
+    padding-bottom: 0;
+  }
+  span:nth-child(1) {
+    border-left: 10/@r solid @main_c;
+    padding-left: 18/@r;
+    display: inline-block;
+    color: @main_c;
+    .font_l;
+  }
+  .result-number {
+    float: right;
+    display: inline-block;
+    margin-right: 30/@r;
+    color: #999;
+    .font_s;
+    b {
+      font-weight: 500;
+      color: #4A90E2;
+      margin: 0 6/@r;
+    }
+  }
+}
+
+.title-sbor {
+  padding: 20px 0 10px;
+  border-bottom: 1px solid @bor_cob;
+}
+
+
+/*帖子*/
+
+.dynamic_wrapper {
+  a:link,
+  a:visited {
+    color: @main_c;
+  }
+  .dynamic_list {
+    text-align: left;
+    padding: 0px 0px 0;
+    background-color: #fff;
+    border-bottom: 10/@r solid @bor_c;
+  }
+  .dynamic_item {
+    .font_xl;
+    padding: 10px 15px;
+    border-bottom: 1px solid @bor_c;
+    .item_title {
+      .font_l;
+    }
+    .item_title,
+    .item_info {
+      width: 70%;
+      float: left;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .item_info {
+      width: 35%;
+      float: right;
+    }
+    .c_text {
+      color: @main_c;
+    }
+    .item-footer {
+      padding-top: 10px;
+      .font_s;
+      .item-author {
+        width: 60%;
+        float: left;
+        img {
+          float: left;
+        }
+        .name {
+          .font_s;
+          display: inline-block;
+          color: #6082B9;
+          float: left;
+        }
+        .tag {
+          display: inline-block;
+          padding: 2px 5px 1px;
+          color: @main_c;
+          border: 1px solid @main_c;
+          margin-left: 5px;
+          .border-radius(4px);
+          height: 24/@r;
+          line-height: 24/@r;
+          float: right;
+        }
+      }
+      img {
+        width: 40/@r;
+        height: 40/@r;
+        .border-radius(50%);
+        background-color: #eee;
+        display: inline-block;
+        position: relative;
+        top: -1px;
+      }
+    }
+    .item_info {
+      text-align: right;
+      .flexbox();
+      span {
+        .flex(1);
+        color: #999;
+      }
+      .num {
+        color: #999;
+        display: inline-block;
+        padding: 0px 5px;
+      }
+    }
+    .item-header {
+      color: #999;
+      .font_s;
+      padding: 5px 0 8px;
+    }
+    .item_con {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      .font_2xl;
+      padding: 10px 0px 0;
+      .flexbox();
+      .item_img {
+        // width: 100/@r;
+        // height: 100/@r;
+        text-align: center;
+        img {
+          height: 100%;
+          max-width: none;
+        }
+      }
+      a {
+        width: 100%;
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+    .item-con-title,
+    .item-con-text {
+      width: 100%;
+      display: block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      color: #444444;
+      cursor: pointer;
+      .font_xl;
+      .flex(1);
+    }
+    .item-con-text {
+      font-weight: normal;
+    }
+  }
+}
+
+.user-no-focus {
+  text-align: center;
+  line-height: 90px;
+  background-color: @bor_co;
+  .font_xl;
+  color: #999;
+}
+
+.user-none {
+  text-align: center; // line-height: 100px;
+  background-color: #fff;
+  font-size: 32/@r;
+  a:link,
+  a:visited {
+    // color: @main_c;
+    color: #fff;
+    font-size: 32/@r;
+  }
+  .find-text {
+    color: #999;
+    display: block;
+    margin: 56/@r 0 52/@r;
+  }
+  .circle_img {
+    width: 216/@r;
+    height: 228/@r;
+    margin: 100/@r auto 10/@r;
+    .border-radius(50%);
+    background: url('./images/empic-2@2x.png') no-repeat center;
+    .background-size(100% auto);
+  }
+  .circle_btn {
+    width: 220/@r;
+    height: 72/@r;
+    line-height: 72/@r;
+    text-align: center;
+    display: block;
+    margin: auto;
+    background-color: @main_c;
+    .border-radius(20px);
+  }
+}

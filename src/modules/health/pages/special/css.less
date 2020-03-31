@@ -1,0 +1,321 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+//菜单板块
+.plate-list{
+  display: block;
+  padding: 40/@r 0 20/@r;
+  }
+  .plate-item{
+    margin-bottom: 20/@r;
+    width:25%;
+    a{
+      display: block;
+    }
+    .icon-wrapper{
+      width:92/@r;
+      height:92/@r;
+      text-align: center;
+      margin: 0 auto;
+      img{
+        width:100%;
+        height:100%;
+        border-radius:50%;
+        background:#f4f4f4;
+      }
+    }
+    .title{
+      text-align: center;
+      color:#222222;
+      font-size: 28/@r;
+      padding:10/@r 0;
+    }
+  }
+
+  //热门推荐
+  .hot-subjects{
+    overflow: hidden;
+    .item-banner{
+      height: 300/@r;
+      overflow:hidden;
+      background-color: @bor_c;
+      border-radius: 10/@r;
+      margin: 0 28/@r;
+      img{
+        width:100%;
+        height: 100%;
+      }
+    }
+    .banner-name{
+      color: #222222;
+      font-size: 30/@r;
+      width: 676/@r;
+      margin:16/@r 28/@r 42/@r;
+      font-family: PingFangSC;
+    }
+  }
+   .online-course{
+    // margin: 0 18/@r;
+    // background: #fff;
+    // overflow-x:hidden;
+    // white-space: nowrap;
+    // margin-top: 20/@r;
+    // padding-bottom: 0px;
+    // display: flex;
+    // justify-content:space-between;
+    padding-right: 28/@r;
+    padding-left: 8/@r;
+    li{
+      display: block;
+      position: relative;
+      // box-shadow: 0 2px 8px rgba(0,0,0,.1);
+      // width: 352/@r;
+      float: left;
+      width: 50%;
+      box-sizing: border-box;
+      padding-left: 20/@r;
+      margin-bottom: 10px;
+      white-space: normal;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .item-avater{
+        // width: 352/@r;
+        height: 198/@r;
+        overflow:hidden;
+        background-color: @bor_c;
+        img{
+          width:100%;
+          height: 100%;
+        }
+      }
+      .course-type{
+        .font_m;
+        display: inline-block;
+        background-color: rgba(66, 157, 242, 0.7);
+        padding:0 10/@r;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fff;
+      }
+      .course-name{
+        padding: 18/@r 32/@r 18/@r 12/@r;
+        margin-bottom: 9/@r;
+        p {
+          height: 76/@r;
+          line-height: 150%;
+          .show_n_lines(2);
+          .font_xl;
+        }
+      }
+      .course-tip{
+        line-height: 150%;
+        color: #A9A9A9;
+        .show_n_lines(1);
+        margin:0;
+        .font_m;
+      }
+    }
+  }
+  .plate-list{
+    padding: 20/@r 0;
+    display: flex;
+  }
+  .plate-item{
+    width:25%;
+    a{
+      display: block;
+    }
+    .icon-wrapper{
+      width:92/@r;
+      height:92/@r;
+      text-align: center;
+      margin: 0 auto;
+      img{
+        width:100%;
+        height:100%;
+        border-radius:50%;
+        background:#f4f4f4;
+      }
+    }
+    .title{
+      text-align: center;
+      color:#222222;
+      font-size: 28/@r;
+      padding:10/@r 0;
+    }
+  }
+
+  //swiperbanner样式
+  @import '~static/css/swiper-3.4.2.min.css';
+  .carousel-wrap {
+    position: relative;
+    width: 100%;
+    height: 300/@r;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  #carousel li {
+    position: absolute;
+    width: 100%;
+  }
+  #carousel a {
+    display: block;
+  }
+
+  .swiper-slide{
+    width: 750/@r;
+    height: 300/@r;
+    overflow: hidden;
+  }
+  #carousel{
+    width: 750/@r;
+    height: 300/@r;
+    overflow: hidden;
+  }
+
+  #carousel img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    height: 300/@r;
+  }
+
+  .carousel-items {
+    position: absolute;
+    z-index: 10;
+    bottom: 10/@r;
+    right: 30/@r;
+    text-align: right;
+    font-size: 0;
+  }
+  #carousel span {
+    display: inline-block;
+    height: 12/@r;
+    width: 12/@r;
+    margin: 0 6/@r;
+    background-color: #b2b2b2;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  #carousel .active {
+    background-color: #fff;
+  }
+  .swiper-pagination-bullet-active{
+    background: #fff;
+  }
+
+
+  .c-wrapper{
+    padding: 32/@r 0;
+    border-top:#F7F7F7 solid 20/@r;
+    .c-title{
+      font-weight: 700;
+      font-size: 34/@r;
+      height: 34/@r;
+      line-height: 34/@r;
+      margin-bottom: 36/@r;
+      .piece{
+        display: block;
+        width: 78/@r;
+        height: 20/@r;
+        background: #1EC8A8;
+        margin-left: 50%;
+        margin-top: -12/@r;
+        margin-bottom: 12/@r;
+      }
+      .piece2{
+        background: #95CEFF;
+      }
+      .piece3{
+        background: #FFFA90;
+      }
+      .piece4{
+        background: rgb(248, 224, 6);
+      }
+    }
+  }
+  .b-wrapper{
+    border-top:none;
+  }
+  .d-wrapper{
+    border-bottom:#F7F7F7 solid 20/@r;
+  }
+  .special-list{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    background: white
+  }
+
+  .ads{
+    overflow: hidden;
+    width: 100%;
+    padding: 32/@r 0;
+    a{
+      display: block;
+      width: 100%;
+      height: 240/@r;
+      background: #DCE4E8;
+      position: relative
+    }
+    img{
+      width:100%;
+      height:100%;
+    }
+    .ad-mark{
+      position:absolute;
+      bottom:5px;
+      right:15px;
+      color:#fff;
+      font-size:12px;
+      text-shadow: 2px 0 4px black;
+    }
+  }
+@media screen and (min-width: @m) {
+  .online-course {
+    li {
+      width: 25%;
+    }
+  }
+
+  .panel-wrapper{
+    display: flex;
+    > div:nth-of-type(1){
+      margin: 0 0 0 30/@r;
+      width: 20%;
+      // box-shadow: 0 2px 8px rgba(0,0,0,.1);
+      .item-banner{
+        height: 198/@r;
+        margin: 0;
+      }
+    }
+    > div:nth-of-type(2){
+      width: 80%;
+    }
+
+    .hot-subjects .banner-name {
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      height: 76/@r;
+      line-height: 150%;
+      .show_n_lines(2);
+      .font_xl;
+      box-shadow: 0px 2px 8px 0px rgba(127, 127, 127, 0.17);
+    }
+
+    .online-course{
+      li{
+        width: 25%;
+      }
+    }
+  }
+}

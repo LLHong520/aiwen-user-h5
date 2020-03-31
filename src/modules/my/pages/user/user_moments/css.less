@@ -1,0 +1,75 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+.user-no-focus {
+  text-align: center;
+  line-height: 100px;
+  background-color: #fff;
+  a:link,
+  a:visited {
+    color: #7bcac5;
+  }
+}
+
+
+/**热门圈子**/
+
+.hot_moments_wrapper {}
+
+.hot_moments_list {
+  text-align: left;
+  padding: 10px 25px;
+  background-color: #ffffff;
+}
+
+.hot_moments_item {
+  float: left;
+  width: 50%;
+  margin-bottom: 15px;
+  .font_2xl;
+  position: relative;
+  .align-items(center);
+  .flexbox();
+  a {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #333;
+  }
+  p.item_desc {
+    padding-top: 5px;
+    color: #999;
+    .font_s;
+  }
+  .item_avater {
+    width: 95/@r;
+    height: 95/@r;
+    margin: 0 auto;
+    margin-right: 10px;
+    img {
+      width: 95/@r;
+      height: 95/@r;
+      .border-radius(50%);
+    }
+  }
+  .item_info {
+    .flex(1); // line-height: 40px;
+  }
+}
+
+.hot_moments_item {
+  clear: both;
+  border-bottom: 1px solid @bor_c;
+  padding: 10px 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  .item_avater {
+    width: 95/@r;
+    margin: 0 auto;
+    margin-right: 19px;
+    img {
+      width: 95/@r;
+    }
+  }
+}

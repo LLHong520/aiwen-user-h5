@@ -1,0 +1,40 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+.img_404 {
+  width: 60%;
+  margin: 0 auto;
+  padding: 70px 0;
+  img {
+    width: 100%;
+  }
+}
+
+h1.errText {
+  .font_3xl;
+  text-align: center;
+  padding: 0px 0px 15px;
+}
+
+.c_999 {
+  width: 60%;
+  margin: 0 auto;
+  .font_l;
+}
+
+
+/**发帖按钮**/
+
+.back_btn {
+  display: block;
+  padding: 10px 0px;
+  margin: 15px auto;
+  text-align: center;
+  border: 1px solid @main_c;
+  background-color: @main_c;
+  color: #fff;
+  width: 40%;
+  font-size: 16px;
+  .box-sizeing(border-box);
+  .border-radius(5px);
+}

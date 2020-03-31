@@ -1,0 +1,32 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+//菜单板块
+.plate-list{
+  padding: 15px 0;
+  display: flex;
+}
+.plate-item{
+  width:25%;
+  a{
+    display: block;
+  }
+  .icon-wrapper{
+    width:46px;
+    height:46px;
+    text-align: center;
+    margin: 0 auto;
+    img{
+      width:100%;
+      height:100%;
+      border-radius:50%;
+      background:#f4f4f4;
+    }
+  }
+  .title{
+    text-align: center;
+    color:#222222;
+    font-size: 14px;
+    padding:5px 0;
+  }
+}

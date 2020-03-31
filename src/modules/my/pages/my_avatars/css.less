@@ -1,0 +1,41 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+.majia_users {
+  width: 100%;
+  background-color: #fff;
+  ul {
+    white-space: nowrap;
+  }
+  li {
+    padding: 10px 15px;
+    position: relative;
+    border-bottom: 1px solid @bor_c;
+    .flexbox();
+    .align-items(center);
+    &.current {
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 15px;
+        bottom: 0;
+        content: '';
+        background: url(./images/icon_checked@3x.png) no-repeat right center;
+        .background-size(25px auto);
+      }
+    }
+  }
+  .avater {
+    position: relative;
+    width: 97/@r;
+    height: 97/@r;
+    margin-right: 15px;
+    .opacity(.8);
+    img {
+      .border-radius(50%);
+      display: block;
+      width: 100%;
+    }
+  }
+}

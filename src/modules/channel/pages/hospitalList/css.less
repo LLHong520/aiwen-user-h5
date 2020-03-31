@@ -1,0 +1,57 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+
+.header_wrapper {
+  .header .back{
+    display: block;
+    width: 80/@r;
+    height: 80/@r;
+    background: url(./images/nav_back@2x.png) no-repeat;
+    background-size: contain;
+    margin: 4/@r 80/@r 0 10/@r;
+  }
+  .city{
+    width: 170/@r;
+    box-sizing: border-box;
+    padding-right: 16/@r;
+    .city_name{
+      display: flex;
+      span{
+        flex: 1;
+        width: 0;
+        color: #282828;
+        font-size: 28/@r;
+        white-space: nowrap;
+        text-align: right;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    i{
+      display: inline-block;
+      width: 40/@r;
+      height: 40/@r;
+      background: url(./images/btn_enter@2x.png) no-repeat;
+      background-size: contain;
+      vertical-align: top;
+      margin-top: 24/@r;
+    }
+  }
+}
+
+.hospital_wrapper{
+  padding: 0 30/@r;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+.hospital_list {
+  li {
+    border-bottom: 1px solid #EFEFEF;
+  }
+}
+
+.empty_box{
+  padding-top: 162/@r;
+}
+

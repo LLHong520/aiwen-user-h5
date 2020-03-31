@@ -1,0 +1,145 @@
+@assets: "~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+@r: 75rem;
+/*我的医生*/
+
+.activity_list {
+  border-top: 20/@r solid #fff;
+}
+
+.famous_doctor {
+  background-color: #fff;
+  padding: 15px 10px;
+  display: flex;
+  border-bottom: 10/@r solid @bor_cob;
+}
+
+.famous_doctor dt {
+  width: 176/@r;
+  height: 176/@r;
+  overflow: hidden;
+  position: relative;
+}
+
+.famous_doctor dt a img {
+  width: 176/@r;
+  height: 176/@r;
+  display: block;
+}
+
+.famous_doctor dt span {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  height: 44/@r;
+  line-height: 44/@r;
+  background: linear-gradient(135deg, rgba(98, 213, 128, 1), rgba(52, 193, 71, 1));
+  .font_xl;
+  color: #fff;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.famous_doctor dt b{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -10px;
+  margin-left: -8px;
+  background: url(./images/icon-play@2x.png) no-repeat;
+  background-size: 16px auto;
+  width: 16px;
+  height: 20px;
+}
+
+.famous_doctor dt span img {
+  width: 17px;
+  height: 16px;
+}
+
+.famous_doctor dd {
+  flex: 1;
+  margin-left: 30/@r;
+  overflow: hidden;
+  position: relative;
+  position: relative;
+}
+
+.fam_doc_name {
+  .font_xl;
+}
+
+.fam_doc_name span {
+  margin-right: 10px;
+  color: #000;
+  .show_n_lines(3);
+}
+
+.fam_doc_dep {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  color: #666;
+  width: 100%; // display:flex;
+  // margin-top: 8px;
+  // white-space: nowrap;
+  // text-overflow: ellipsis;
+  // overflow: hidden;
+  font-size: 14px;
+  span {
+    float: left;
+  }
+  i {
+    float: right;
+  }
+  .begin-time {
+    color: #666;
+    .font_l;
+  }
+  .c_free {
+    color: #30C443;
+  }
+}
+
+.fam_doc_dep span {
+  flex: 1;
+  &:nth-of-type(2) {
+    text-align: right;
+  }
+}
+
+.fam_doc_good {
+  color: #646464;
+  margin-top: 8px;
+  margin-right: 10px;
+  line-height: 18px;
+  font-size: 14px;
+  height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  .begin-time {
+    color: @main_c;
+  }
+}
+
+.fam_doc_talk {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.fam_doc_talk i,
+fam_doc_dep i {
+  color: @main_c;
+  display: block;
+  width: 120px;
+  height: 19px;
+  line-height: 19px;
+  text-align: right;
+}
+
+//==========================pc
+@media screen and(min-device-width:760px) {}

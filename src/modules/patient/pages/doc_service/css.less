@@ -1,0 +1,46 @@
+@assets: "~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less"; //科室信息
+
+.service_wrapper {
+  height: 100vh;
+  background: #F6F7FA;
+  display: flex;
+  align-items: center;
+  padding: 0 30/@r;
+  padding-bottom: 88/@r;
+  box-sizing: border-box;
+  .service_items{
+    flex: 1;
+    width: 0;
+    margin-top: -50/@r;
+    a{
+      display: block;
+    }
+  }
+  dl{
+    background-color: #fff;
+    border-radius: 8/@r;
+    margin-bottom: 30/@r;
+    font-size: 22/@r;
+    color: #AEB1B6;
+    line-height: 44/@r;
+    height: 182/@r;
+    padding-left: 30/@r;
+    padding-top: 47/@r;
+    box-sizing: border-box;
+    box-shadow: 0px 6px 16px 2px rgba(0, 61, 113, 0.05);
+    dt{
+      font-size: 32/@r;
+      color: #2D2D2D;
+      font-weight: bold;
+    }
+    &.singIn,&.look{
+      background:#fff url(./images/bg_main_report@2x.png) no-repeat right center;
+      background-size: 158/@r 114/@r;
+    }
+    &.look{
+      background-image: url(./images/bg_main_view@2x.png);
+    }
+  }
+}

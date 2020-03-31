@@ -1,0 +1,166 @@
+@assets: "~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less"; //科室信息
+
+.order_wrapper {
+  min-height: 100vh;
+  background-color: #F6F7FA;
+  /deep/ #wrapper__inner{
+    background:linear-gradient(180deg,rgba(0,105,230,1) 0%,rgba(246,247,250,1) 100%) no-repeat;
+    background-size: 100% 544/@r;
+  }
+  /deep/ .header{
+    background: transparent;
+    color: #ffffff;
+    h2{
+      color: #ffffff;
+    }
+    .retrun b.gray{
+      background: url("./images/nav_back_w@2x.png") no-repeat center;
+      background-size: 56/@r;
+    }
+  }
+  .order_content {
+    box-sizing: border-box;
+    padding: 40/@r 30/@r 30/@r;
+    margin-bottom: 112/@r;
+  }
+  .order_title{
+    color: #ffffff;
+    margin-bottom: 50/@r;
+    .order_title_status{
+      font-size: 40/@r;
+      margin-bottom: 20/@r;
+      line-height: 56/@r;
+      font-weight:600;
+    }
+    .order_title_desc{
+      font-size: 28/@r;
+      line-height: 40/@r;
+    }
+  }
+  .order_module{
+    background-color: #ffffff;
+    border-radius:6/@r;
+    padding: 0 30/@r;
+    margin-bottom: 30/@r;
+    .order_module_title{
+      height: 100/@r;
+      color: #2D2D2D;
+      font-size: 28/@r;
+      display: flex;
+      align-items: center;
+      font-weight:600;
+    }
+    .order_cell{
+      display: flex;
+      border-top: 1px solid #F3F4F5;
+      font-size: 26/@r;
+      height: 96/@r;
+      box-sizing: border-box;
+      align-items: center;
+      .order_cell-label{
+        color: #AEB1B6;
+        font-size: 26/@r;
+        width: 200/@r;
+        flex-shrink: 0;
+      }
+      .order_cell_value{
+        color: #2D2D2D;
+        font-size: 26/@r;
+        word-break: break-all;
+        .order_info_imgs{
+          display: flex;
+          flex-wrap: wrap;
+          li{
+            margin-right: 24/@r;
+            margin-bottom: 24/@r;
+            width: 58*2/@r;
+            height:58*2/@r;
+            background-color: #f8f8f8;
+            display: flex;
+            align-items: center;
+
+            img{
+              width: 100%;
+              height:100%
+            }
+          }
+        }
+      }
+      .split{
+        display: inline-block;
+        margin: 0 30/@r;
+        border-left:1px solid #F3F4F5;
+        width: 1px;
+        height: 18px;
+      }
+      .copy{
+        color:#2688FC;
+        font-size: 26/@r;
+      }
+    }
+    .order_cell_type{
+      .money{
+        color: #FB4343;
+      }
+    }
+    .order_disease_info{
+      align-items: baseline;
+      height: auto;
+      padding: 30/@r 0;
+    }
+    .order_disease_imgs{
+      // align-items: baseline;
+      height: auto;
+      vertical-align: top;
+      padding: 30/@r 0;
+      position: relative;
+      .label_img{
+        position: absolute;
+        top: 30/@r;
+      }
+      // .img_item{
+      //   width: 116/@r;
+      //   height: 116/@r;
+      //   img{
+      //     width: 100%;
+      //     height: 100%;
+      //   }
+      // }
+    }
+  }
+}
+.btn_fixed{
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: env(safe-area-inset-bottom);
+  .contact_doctor_btn{
+    display: inline-block;
+    width: 100%;
+    height: 80/@r;
+    font-size: 30/@r;
+    line-height: 80/@r;
+    text-align: center;
+    border-radius: 4/@r;
+    background: #ffffff;
+    border: 1px solid #EFEFEF;
+    color: #2D2D2D;
+    font-weight:600;
+    &.btn_blue{
+      color: #fff;
+      background-color: #2688FC!important;
+    }
+    &.disabled {
+      background-color: #ffffff;
+    }
+  }
+  .btn_fixed_wrapper{
+    height: 80/@r;
+    padding: 18/@r;
+  }
+}
+

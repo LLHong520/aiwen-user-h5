@@ -1,0 +1,302 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+.icon-share{
+  position: relative;
+  top:-1px;
+}
+.banner{
+  min-height: 100px;
+  background-color: @bor_c;
+}
+//科室信息
+.departInfo{
+  padding: 10px;
+
+  .depart_name{
+    padding: 20/@r 0;
+    font-weight:bold;
+    color: #222;
+    display: flex;
+    span{
+      color: @main_c;
+      flex: 1;
+      font-weight:normal;
+      .font_xl;
+      text-align: right;
+    }
+  }
+  .depart_desc{
+    color: #A9A9A9;
+    .font_xl;
+  }
+}
+
+.article-list{
+  border-bottom: 10px solid @bor_c;
+  li{
+    padding: 0 20/@r;
+  }
+}
+//推荐医生
+.famous_doc{
+  padding: 35/@r 0;
+  .clearfix;
+  border-bottom: 10px solid @bor_c;
+
+  .nav-icon{
+    width: 88/@r;
+    height: 88/@r;
+    margin-right: 10px;
+    border-radius: 50%;
+    img{
+      width: 88/@r;
+      height: 88/@r;
+      border-radius: 50%;
+    }
+  }
+  li{
+    width: 335/@r;
+    height: 168/@r;
+    float: left;
+    box-sizing: border-box;
+    margin-left: 25/@r;
+    margin-bottom: 22/@r;
+    a{
+      display: flex;
+      align-items: center;
+      padding: 40/@r 20/@r;
+      background:rgba(248,248,248,1);
+
+      .doc-titles{
+        .font_l;
+        color:rgba(169,169,169,1);
+        line-height:34/@r;
+      }
+    }
+  }
+}
+
+
+//icons
+.icon{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.placeHolder{
+  min-height: 100px;
+  background-color: @bor_c;
+}
+//健康科普文章列表
+.kepu-list{
+  padding: 20/@r 0;
+  background-color: #fff;
+  border-bottom: 10px solid @bor_c;
+  .kepu-cell{
+    border-bottom: 1px solid @bor_c;
+  }
+
+  .kepu-cell-con{
+    padding: 10px 20/@r 20/@r 20/@r;
+    cursor: pointer;
+    .flexbox();
+    .cell-text{
+      .flexbox();
+      .flex(1);
+      .flexdirection(column);
+      overflow: hidden;
+      justify-content:space-between;
+    }
+    .cell-title{
+      .font_2xl;
+      color: #333;
+      line-height: 180%;
+      line-height: 125%;
+      .show_n_lines(2);
+    }
+    .cell-doc-info{
+      .font_l;
+      color: #828888;
+      line-height: 140%;
+      display:flex;
+      p{
+        flex:1;
+        &:nth-of-type(2){
+          text-align: right;
+        }
+      }
+    }
+    .cell-img{
+      width: 260/@r;
+      height: 180/@r;
+      overflow: hidden;
+      margin-left: 38/@r;
+      background-color: #f2f2f2;
+      img{
+        width: 280/@r;
+        height: 180/@r;
+      }
+    }
+  }
+  .kepu-cell-footer{
+    .flexbox();
+    .font_l;
+    color: #828888;
+    padding:20/@r;
+
+    div{
+      .flex(1);
+      &:nth-of-type(2){
+        text-align: right;
+      }
+    }
+  }
+}
+
+//热门科室
+.hot-departments{
+  padding: 10px 10px;
+  border-bottom: 10px solid @bor_c;
+
+  .department-item{
+    width: 25%;
+    padding: 10px 0;
+    float: left;
+    text-align: center;
+    .item-avater{
+      margin: 0 auto;
+      width: 60/@r;
+      height: 60/@r;
+      img{
+        display: block;
+        width: 60/@r;
+        height: 60/@r;
+        border-radius: 50%;
+      }
+    }
+
+    .dep-name{
+      padding: 5px;
+      color: #A9A9A9;
+      .font_xl;
+    }
+
+
+  }
+}
+//=====后台可配置导航
+.index-config-navs{
+  display: flex;
+  border-bottom: 10px solid @bor_c;
+  li{
+    flex: 1;
+    text-align: center;
+    padding: 10px 0 20px;
+    .nav-icon{
+      width: 102/@r;
+      height: 102/@r;
+      margin: 10px auto;
+      img{
+        width: 102/@r;
+        height: 102/@r;
+      }
+    }
+
+    p.nav-name{
+      .font_xl;
+      color: #555;
+    }
+  }
+}
+//====
+//相关视频
+.relative-movies{
+  border-bottom: 10px solid @bor_c;
+  margin-top: 10px;
+  padding-bottom: 10px;
+
+  li{
+    display: inline-block;
+    position: relative;
+    margin-left: 32/@r;
+    padding: 0 0 10px;
+    // box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    width: 328/@r;
+    white-space: normal;
+    .item-avater{
+      width: 328/@r;
+      height: 184/@r;
+      overflow:hidden;
+      background-color: @bor_c;
+    }
+    .course-type{
+      .font_m;
+      display: inline-block;
+      background-color: rgba(66, 157, 242, 0.7);
+      padding:0 5px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #fff;
+    }
+    .course-name{
+      line-height: 150%;
+      .show_n_lines(1);
+      margin: 10px 0;
+      .font_xl;
+    }
+    .course-tip{
+      line-height: 150%;
+      color: #A9A9A9;
+      .show_n_lines(1);
+      margin:0;
+      .font_m;
+    }
+  }
+}
+
+
+//热门专题
+.hot-subjects{
+  width: 100%;
+  overflow-x:scroll;
+  white-space: nowrap;
+  border-bottom: 10px solid @bor_c;
+  margin-top: 10px;
+  padding-bottom: 10px;
+
+  li{
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    width: 328/@r;
+    white-space: normal;
+    .item-avater{
+      width: 328/@r;
+      height: 184/@r;
+      overflow:hidden;
+      background-color: @bor_c;
+    }
+    .course-type{
+      .font_m;
+      display: inline-block;
+      background-color: rgba(66, 157, 242, 0.7);
+      padding:0 5px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #fff;
+    }
+    .course-name{
+      color: #222;
+      padding: 0 5px;
+      line-height: 150%;
+      .show_n_lines(2);
+      margin: 10px 0;
+      .font_xl;
+    }
+  }
+}

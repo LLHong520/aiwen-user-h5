@@ -1,0 +1,11 @@
+export const USER_LOGIN = "USER_LOGIN";
+export const SET_USERINFO = "SET_USERINFO";
+export const SET_TOKEN = "SET_TOKEN";
+export const UPDATE_USERINFO = "UPDATE_USERINFO";
+export const SET_WXCONGIG_URL = "SET_WXCONGIG_URL";
+export const SET_QUERY_CHANNEL = "SET_QUERY_CHANNEL";
+export const SET_APP_QUERY_STRING = "SET_APP_QUERY_STRING";
+export const SET_MESSAGE_NUM = "SET_MESSAGE_NUM";
+export const SET_LOCATION = "SET_LOCATION";
+export const SET_CITY = "SET_CITY";
+export const SET_LAYOUT_HEIGHT = "SET_LAYOUT_HEIGHT";

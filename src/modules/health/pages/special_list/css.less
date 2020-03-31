@@ -1,0 +1,78 @@
+@assets:"~@/assets";
+@import "@{assets}/css/flex.less";
+@import "@{assets}/css/fix.less";
+h2{
+  margin: 68/@r 0 0 24/@r;
+  font-weight: 800;
+  font-size: 34/@r;
+}
+.close{
+  display: block;
+  width: 32/@r;
+  height: 32/@r;
+  background: url('~@/assets/images/arrow-cancel.png') no-repeat;
+  position: absolute;
+  right: 62/@r;
+  top: 68/@r;
+}
+.total{
+  display: block;
+  margin: 62/@r 0 24/@r 24/@r;
+  font-size: 24/@r;
+  text-align: center;
+  line-height: 60/@r;
+  width:110/@r;
+  height: 60/@r;
+  background: #F3F5F7;
+  color: #71777D;
+  border-radius: 6/@r;
+}
+.special_tags{
+  overflow: hidden;
+  margin: 0 auto;
+  padding-bottom: 65px;
+  li{
+    display: block;
+    float: left;
+    margin: 28/@r 0 0 22/@r;
+    font-size: 24/@r;
+    text-align: center;
+    line-height: 60/@r;
+    width:160/@r;
+    height: 60/@r;
+    background: #F3F5F7;
+    border-radius: 6/@r;
+    color: #71777D;
+  }
+ }
+.active{
+  background: #29CFAC !important;
+  color: white !important;
+}
+.bottom-btn {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  p{
+    color: #222222;
+    font-size: 30/@r;
+    text-align: right;
+    margin-right: 30/@r;
+    margin-bottom: 11/@r;
+    span{
+      color: #10C1A4;
+    }
+  }
+  .confirm_btn{
+    width: 100%;
+    height: 72/@r;
+    line-height: 60/@r;
+    background: linear-gradient(180deg,rgba(38,198,173,1),rgba(47,186,160,1));
+    text-align: center;
+    color: white;
+    font-size: 30/@r;
+    border-radius: 4/@r;
+    border: 0;
+    opacity: 0.2;
+  }
+}

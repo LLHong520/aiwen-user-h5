@@ -1,0 +1,126 @@
+.box-sizeing(@type:border-box){
+  box-sizing: @type;
+}
+.background-size(@type){
+  background-size: @type;
+}
+.border-radius(@radius:5px){
+  border-radius:@radius;
+}
+.transition(@arguments){
+  transition:@arguments;
+}
+.transform(@arguments){
+   transform: @arguments;
+}
+.transform-origin(@arguments){
+   transform-origin: @arguments;
+}
+.opacity(@rgba_a:.4){
+    @result:@rgba_a*100;
+    filter: alpha(opacity=@result);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{result})";
+    opacity:@rgba_a;
+}
+.textshadow(@right_left1:5px,@bottom_top1:5px,@text :5px,@tetx_color:#b6ebf7){
+    text-shadow:@arguments;
+}
+.boxshadow(@right_left:5px,@bottom_top:5px,@box :5px,@box_color:#b6ebf7){
+    box-shadow:@arguments;
+}
+.gradient(@angle:top,@start:#000,@stop:#ff050e){
+  background: -webkit-linear-gradient(@angle,@start,@stop);
+  background: -moz-linear-gradient(@angle,@start,@stop);
+  background: -o-linear-gradient(@angle,@start,@stop);
+  background: linear-gradient(@angle,@start,@stop);
+}
+
+.keyframes(@name; @arguments) {
+  @-webkit-keyframes @name { @arguments(); }
+	@-moz-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
+
+.animation(@arguments) {
+	animation: @arguments;
+}
+.animation-name(@name) {
+  animation-name: @name;
+}
+.animation-duration(@arguments) {
+  animation-duration: @arguments;
+}
+.animation-fill-mode(@arguments) {
+  animation-fill-mode: both;
+}
+.show_n_lines(@num) {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @num;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+}
+
+.icon_bg_image(@url:''){
+  // background-image:@{split};
+  background-image: url('@{url}@2x.png');
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+    background-image: url('@{url}@3x.png');
+  }
+}
+.text_algin(@algin){
+  text-align: @algin;
+}
+
+// @main_c:#349695;//主题
+@main_c:#2688FC;//主题
+@bor_c:#F5F6FA;//底部边框
+@bor_co:#F2F2F2;//背景色
+@bor_cob:#EFEFEF;//底色
+@blue:#6082B9;//蓝色字体
+
+@color_doc:#349695;//医生card颜色
+@skin_act_doc:#FEFBF0;//活动医生主页
+
+@r:75rem;
+@m:750px;
+
+.c_main{
+  color:@main_c !important;
+}
+
+.border-lan{border-bottom:10px solid @bor_cob;}
+
+.bor_cob{border-bottom:1px solid @bor_cob;}
+
+.font_m{
+  font-size: 10px;//20
+  font-size: 20/@r;//20
+}
+.font_s{
+  font-size: 12px;//22
+  font-size: 22/@r;//22
+}
+.font_l{
+  font-size: 14px;//24
+  font-size: 24/@r;//24
+}
+.font_xl{
+  font-size: 16px;//26
+  font-size: 26/@r;//26
+}
+.font_2xl{
+  font-size: 18px;//30
+  font-size: 30/@r;//30
+}
+.font_3xl{
+  font-size: 20px;//32
+  font-size: 32/@r;//32
+}
+.font_4xl{
+  font-size: 24px;//36
+  font-size: 36/@r;//36
+}
